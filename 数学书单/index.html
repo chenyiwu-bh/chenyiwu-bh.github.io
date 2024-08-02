@@ -1,0 +1,995 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="chenyiwu-bh">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="数学书单Allen Hatcher“Algebraic Topology” Loring W. Tu“An Introduction to Manifolds” Haim Brezis“Functional Analysis, Sobolev Spaces and Partial Differential Equations” Morris Kline“Mathematical Thought f">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数学书单">
+<meta property="og:url" content="http://example.com/%E6%95%B0%E5%AD%A6%E4%B9%A6%E5%8D%95/index.html">
+<meta property="og:site_name" content="chenyiwu-bh&#39;s Blog">
+<meta property="og:description" content="数学书单Allen Hatcher“Algebraic Topology” Loring W. Tu“An Introduction to Manifolds” Haim Brezis“Functional Analysis, Sobolev Spaces and Partial Differential Equations” Morris Kline“Mathematical Thought f">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-07-18T14:58:07.479Z">
+<meta property="article:modified_time" content="2024-08-02T15:50:37.623Z">
+<meta property="article:author" content="chenyiwu-bh">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>数学书单 - chenyiwu-bh&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>摸鱼的数学分析学生</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="数学书单"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-07-18 22:58" pubdate>
+          2024年7月18日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.6k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          14 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">数学书单</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="数学书单"><a href="#数学书单" class="headerlink" title="数学书单"></a>数学书单</h1><p>Allen Hatcher<br><em>“Algebraic Topology”</em></p>
+<p>Loring W. Tu<br><em>“An Introduction to Manifolds”</em></p>
+<p>Haim Brezis<br><em>“Functional Analysis, Sobolev Spaces and Partial Differential Equations”</em></p>
+<p>Morris Kline<br><em>“Mathematical Thought from Ancient to Modern Times Volumn 1”</em></p>
+<p>Morris Kline<br><em>“Mathematical Thought from Ancient to Modern Times Volumn 2”</em></p>
+<p>Morris Kline<br><em>“Mathematical Thought from Ancient to Modern Times Volumn 3”</em></p>
+<p>Morris Kline<br><em>“Mathematical Thought from Ancient to Modern Times Volumn 4”</em></p>
+<p>Lawrence C. Evans<br><em>“Partial Differential Equations Second Edition”</em></p>
+<p>Brian C. Hall<br><em>“Quantum Theory for Mathematicians”</em></p>
+<p>Bruce C. Berndt<br><em>“Ramanujan”s Notebooks Part I”</em></p>
+<p>Bruce C. Berndt<br><em>“Ramanujan”s Notebooks Part II”</em></p>
+<p>Bruce C. Berndt<br><em>“Ramanujan”s Notebooks Part III”</em></p>
+<p>Bruce C. Berndt<br><em>“Ramanujan”s Notebooks Part IV”</em></p>
+<p>Bruce C. Berndt<br><em>“Ramanujan”s Notebooks Part V”</em></p>
+<p>I. S. Gradshteyn, I. M. Ryzhik<br><em>“Table of Integrals, Series, and Products Seventh Edition”</em></p>
+<p>John W. Milnor<br><em>“Topology from the Differentiable Viewpoint”</em></p>
+<p>Gaisi Takeuti, Wilson M. Zaring<br><em>(GTM 001) “Introduction to Axiomatic Set Theory”</em></p>
+<p>John C. Oxtoby<br><em>(GTM 002) “Measure and Category: A Survey of the Analogies between Topological and Measure Spaces”</em></p>
+<p>H. H. Schaefer, M. P. Wolff<br><em>(GTM 003) “Topological Vector Spaces”</em></p>
+<p>H.H. Schaefer, M.P. Wolff<br><em>(GTM 003) “Topological Vector Spaces”</em></p>
+<p>Peter Hilton, Urs Stammbach<br><em>(GTM 004) “A Course in Homological Algebra”</em></p>
+<p>Saunders Mac Lane<br><em>(GTM 005) “Categories for the Working Mathematician”</em></p>
+<p>Daniel R. Hughes, Fred C. Piper<br><em>(GTM 006) “Projective Planes”</em></p>
+<p>Jean-Pierre Serre<br><em>(GTM 007) “A Course in Arithmetic”</em></p>
+<p>Gaisi Takeuti, Wilson M. Zaring<br><em>(GTM 008) “Axiomatic Set Theory”</em></p>
+<p>James E. Humphreys<br><em>(GTM 009) “Introduction to Lie Algebras and Representation Theory”</em></p>
+<p>Marshall M. Cohen<br><em>(GTM 010) “A Course in Simple-Homotopy Theory”</em></p>
+<p>John B. Conway<br><em>(GTM 011) “Functions of One Complex Variable I”</em></p>
+<p>Richard Beals<br><em>(GTM 012) “Advanced Mathematical Analysis”</em></p>
+<p>Frank W. Anderson, Kent R. Fuller<br><em>(GTM 013) “Rings and Categories of Modules”</em></p>
+<p>Martin Golubitsky, Victor Guillemin<br><em>(GTM 014) “Stable Mappings and Their Singularities”</em></p>
+<p>Sterling K. Berberian<br><em>(GTM 015) “Lectures in Functional Analysis and Operator Theory”</em></p>
+<p>David J. Winter<br><em>(GTM 016) “The Structure of Fields”</em></p>
+<p>Murray Rosenblatt<br><em>(GTM 017) “Random Processes”</em></p>
+<p>Paul R. Halmos<br><em>(GTM 018) “Measure Theory”</em></p>
+<p>Paul R. Halmos<br><em>(GTM 019) “A Hilbert Space Problem Book”</em></p>
+<p>Dale Husemoller<br><em>(GTM 020) “Fibre Bundles”</em></p>
+<p>James E. Humphreys<br><em>(GTM 021) “Linear Algebraic Groups”</em></p>
+<p>Donald W. Barnes, John M. Mack<br><em>(GTM 022) “An Algebraic Introduction to Mathematical Logic”</em></p>
+<p>Werner H. Greub<br><em>(GTM 023) “Linear Algebra”</em></p>
+<p>Richard B. Holmes<br><em>(GTM 024) “Geometric Functional Analysis and Its Applications”</em></p>
+<p>Edwin Hewitt, Karl Stromberg<br><em>(GTM 025) “Real and Abstract Analysis”</em></p>
+<p>Ernest G. Manes<br><em>(GTM 026) “Algebraic Theories”</em></p>
+<p>John L. Kelley<br><em>(GTM 027) “General Topology”</em></p>
+<p>Oscar Zariski, Pierre Samuel<br><em>(GTM 028) “Commutative Algebra I”</em></p>
+<p>Oscar Zariski, Pierre Samuel<br><em>(GTM 029) “Commutative Algebra II”</em></p>
+<p>Nathan Jacobson<br><em>(GTM 030) “Lectures in Abstract Algebra I: Basic Concepts”</em></p>
+<p>Nathan Jacobson<br><em>(GTM 031) “Lectures in Abstract Algebra II: Linear Algebra”</em></p>
+<p>Nathan Jacobson<br><em>(GTM 032) “Lectures in Abstract Algebra III: Theory of Fields and Galois Theory”</em></p>
+<p>Morris W. Hirsch<br><em>(GTM 033) “Differential Topology”</em></p>
+<p>Frank Spitzer<br><em>(GTM 034) “Principles of Random Walk”</em></p>
+<p>Herbert Alexander, John Wermer<br><em>(GTM 035) “Several Complex Variables and Banach Algebras”</em></p>
+<p>John L. Kelley, Isaac Namioka<br><em>(GTM 036) “Linear Topological Spaces”</em></p>
+<p>J. Donald Monk<br><em>(GTM 037) “Mathematical Logic”</em></p>
+<p>H. Grauert, K. Fritzsche<br><em>(GTM 038) “Several Complex Variables”</em></p>
+<p>William Arveson<br><em>(GTM 039) “An Invitation to $C^</em>$-Algebras”*</p>
+<p>John G. Kemeny, J. Laurie Snell, Anthony W. Knapp, D.S. Griffeath<br><em>(GTM 040) “Denumerable Markov Chains”</em></p>
+<p>Tom M. Apostol<br><em>(GTM 041) “Modular Functions and Dirichlet Series in Number Theory”</em></p>
+<p>Jean-Pierre Serre, Leonhard L. Scott<br><em>(GTM 042) “Linear Representations of Finite Groups”</em></p>
+<p>Leonard Gillman, Meyer Jerison<br><em>(GTM 043) “Rings of Continuous Functions”</em></p>
+<p>Keith Kendig<br><em>(GTM 044) “Elementary Algebraic Geometry”</em></p>
+<p>M. Loève<br><em>(GTM 045) “Probability Theory I”</em></p>
+<p>M. Loève<br><em>(GTM 046) “Probability Theory II”</em></p>
+<p>Edwin E. Moise<br><em>(GTM 047) “Geometric Topology in Dimensions 2 and 3”</em></p>
+<p>R. K. Sachs, H. Wu<br><em>(GTM 048) “General Relativity for Mathematicians”</em></p>
+<p>K. W. Gruenberg, A. J. Weir<br><em>(GTM 049) “Linear Geometry”</em></p>
+<p>Harold M. Edwards<br><em>(GTM 050) “Fermat”s Last Theorem: A Genetic Introduction to Algebraic Number Theory”</em></p>
+<p>William Klingenberg, D. Hoffman<br><em>(GTM 051) “A Course in Differential Geometry”</em></p>
+<p>Robin Hartshorne<br><em>(GTM 052) “Algebraic Geometry”</em></p>
+<p>Yu. I. Manin, Boris Zilber<br><em>(GTM 053) “A Course in Mathematical Logic for Mathematicians”</em></p>
+<p>Mark E. Watkins, Jack E. Graver<br><em>(GTM 054) “Combinatorics with Emphasis on the Theory of Graphs”</em></p>
+<p>Arlen Brown, Carl Pearcy<br><em>(GTM 055) “Introduction to Operator Theory I: Elements of Functional Analysis”</em></p>
+<p>William S. Massey<br><em>(GTM 056) “Algebraic Topology: An Introduction”</em></p>
+<p>Richard H. Crowell, Ralph H. Fox<br><em>(GTM 057) “Introduction to Knot Theory”</em></p>
+<p>Neal Koblitz<br><em>(GTM 058) “p-adic Numbers, p-adic Analysis, and Zeta-Functions”</em></p>
+<p>Serge Lang<br><em>(GTM 059) “Cyclotomic Fields”</em></p>
+<p>V. I. Arnold, A. Weinstein, K. Vogtmann<br><em>(GTM 060) “Mathematical Methods of Classical Mechanics”</em></p>
+<p>George W. Whitehead<br><em>(GTM 061) “Elements of Homotopy Theory”</em></p>
+<p>M.I. Kargapolov, Ju.I. Merzljakov<br><em>(GTM 062) “Fundamentals of the Theory of Groups”</em></p>
+<p>Béla Bollobás<br><em>(GTM 063) “Graph Theory: An Introductory Course”</em></p>
+<p>R. E. Edwards<br><em>(GTM 064) “Fourier Series: A Modern Introduction Volume 1”</em></p>
+<p>Raymond O. Wells, Jr.<br><em>(GTM 065) “Differential Analysis on Complex Manifolds”</em></p>
+<p>William C. Waterhouse<br><em>(GTM 066) “Introduction to Affine Group Schemes”</em></p>
+<p>Jean-Pierre Serre<br><em>(GTM 067) “Local Fields”</em></p>
+<p>Joachim Weidmann<br><em>(GTM 068) “Linear Operators in Hilbert Spaces”</em></p>
+<p>Serge Lang<br><em>(GTM 069) “Cyclotomic Fields II”</em></p>
+<p>William S. Massey<br><em>(GTM 070) “Singular Homology Theory”</em></p>
+<p>Herschel Farkas, Irwin Kra<br><em>(GTM 071) “Riemann Surfaces”</em></p>
+<p>John Stillwell<br><em>(GTM 072) “Classical Topology and Combinatorial Group Theory”</em></p>
+<p>Thomas W. Hungerford<br><em>(GTM 073) “Algebra”</em></p>
+<p>Harold Davenport, Hugh Montgomery<br><em>(GTM 074) “Multiplicative Number Theory”</em></p>
+<p>Gerhard P. Hochschild<br><em>(GTM 075) “Basic Theory of Algebraic Groups and Lie Algebras”</em></p>
+<p>Shigeru Iitaka<br><em>(GTM 076) “Algebraic Geometry: An Introduction to Birational Geometry of Algebraic Varieties”</em></p>
+<p>Erich Hecke<br><em>(GTM 077) “Lectures on the Theory of Algebraic Numbers”</em></p>
+<p>Stanley Burris, H.P. Sankappanavar<br><em>(GTM 078) “A Course in Universal Algebra”</em></p>
+<p>Peter Walters<br><em>(GTM 079) “An Introduction to Ergodic Theory”</em></p>
+<p>Derek J.S. Robinson<br><em>(GTM 080) “A Course in the Theory of Groups”</em></p>
+<p>Otto Forster<br><em>(GTM 081) “Lectures on Riemann Surfaces”</em></p>
+<p>Raoul Bott, Loring W. Tu<br><em>(GTM 082) “Differential Forms in Algebraic Topology”</em></p>
+<p>Lawrence C. Washington<br><em>(GTM 083) “Introduction to Cyclotomic Fields”</em></p>
+<p>Kenneth Ireland, Michael Rosen<br><em>(GTM 084) “A Classical Introduction to Modern Number Theory”</em></p>
+<p>R. E. Edwards<br><em>(GTM 085) “Fourier Series: A Modern Introduction Volume 2”</em></p>
+<p>J.H. van Lint<br><em>(GTM 086) “Introduction to Coding Theory”</em></p>
+<p>Kenneth S. Brown<br><em>(GTM 087) “Cohomology of Groups”</em></p>
+<p>Richard S. Pierce<br><em>(GTM 088) “Associative Algebras”</em></p>
+<p>Serge Lang<br><em>(GTM 089) “Introduction to Algebraic and Abelian Functions”</em></p>
+<p>Arne Brøndsted<br><em>(GTM 090) “An Introduction to Convex Polytopes”</em></p>
+<p>Alan F. Beardon<br><em>(GTM 091) “The Geometry of Discrete Groups”</em></p>
+<p>Joseph Diestel<br><em>(GTM 092) “Sequences and Series in Banach Spaces”</em></p>
+<p>B.A. Dubrovin, A.T. Fomenko, S.P. Novikov<br><em>(GTM 093) “Modern Geometry — Methods and Applications Part I: The Geometry of Surfaces”</em></p>
+<p>Frank W. Warner<br><em>(GTM 094) “Foundations of Differentiable Manifolds and Lie Groups”</em></p>
+<p>Albert N. Shiryaev<br><em>(GTM 095) “Probability-1”, “ Probability-2”</em></p>
+<p>John B. Conway<br><em>(GTM 096) “A Course in Functional Analysis”</em></p>
+<p>Neal I. Koblitz<br><em>(GTM 097) “Introduction to Elliptic Curves and Modular Forms”</em></p>
+<p>Theodor Bröcker, Tammo tom Dieck<br><em>(GTM 098) “Representations of Compact Lie Groups”</em></p>
+<p>L.C. Grove, C.T. Benson<br><em>(GTM 099) “Finite Reflection Groups”</em></p>
+<p>Christian Berg, Jens Peter Reus Christensen, Paul Ressel<br><em>(GTM 100) “Harmonic Analysis on Semigroups: Theory of Positive Definite and Related Functions”</em></p>
+<p>Harold M. Edwards<br><em>(GTM 101) “Galois Theory”</em></p>
+<p>V. S. Varadarajan<br><em>(GTM 102) “Lie Groups, Lie Algebras, and Their Representations”</em></p>
+<p>Serge Lang<br><em>(GTM 103) “Complex Analysis”</em></p>
+<p>B.A. Dubrovin, A.T. Fomenko, S.P. Novikov<br><em>(GTM 104) “Modern Geometry — Methods and Applications Part II: The Geometry and Topology of Manifolds”</em></p>
+<p>Serge Lang<br><em>(GTM 105) “$SL_2(\mathbb{R})$”</em></p>
+<p>Joseph H. Silverman<br><em>(GTM 106) “The Arithmetic of Elliptic Curves”</em></p>
+<p>Peter J. Olver<br><em>(GTM 107) “Applications of Lie Groups to Differential Equations”</em></p>
+<p>R. Michael Range<br><em>(GTM 108) “Holomorphic Functions and Integral Representations in Several Complex Variables”</em></p>
+<p>Olli Lehto<br><em>(GTM 109) “Univalent Functions and Teichmüller Spaces”</em></p>
+<p>Serge Lang<br><em>(GTM 110) “Algebraic Number Theory”</em></p>
+<p>Dale Husemöller<br><em>(GTM 111) “Elliptic Curves”</em></p>
+<p>Serge Lang<br><em>(GTM 112) “Elliptic Functions”</em></p>
+<p>Ioannis Karatzas, Steven Shreve<br><em>(GTM 113) “Brownian Motion and Stochastic Calculus”</em></p>
+<p>Neal Koblitz<br><em>(GTM 114) “A Course in Number Theory and Cryptography”</em></p>
+<p>Marcel Berger, Bernard Gostiaux<br><em>(GTM 115) “Differential Geometry: Manifolds, Curves and Surfaces”</em></p>
+<p>John L. Kelley, T.P. Srinivasan<br><em>(GTM 116) “Measure and Integral: Volume 1”</em></p>
+<p>Jean-Pierre Serre<br><em>(GTM 117) “Algebraic Groups and Class Fields”</em></p>
+<p>Gert K. Pedersen<br><em>(GTM 118) “Analysis Now”</em></p>
+<p>Joseph J. Rotman<br><em>(GTM 119) “An Introduction to Algebraic Topology”</em></p>
+<p>William P. Ziemer<br><em>(GTM 120) “Weakly Differentiable Functions: Sobolev Spaces and Functions of Bounded Variation”</em></p>
+<p>Serge Lang<br><em>(GTM 121) “Cyclotomic Fields I and II”</em></p>
+<p>Reinhold Remmert<br><em>(GTM 122) “Theory of Complex Functions”</em></p>
+<p>H.-D. Ebbinghaus, H. Hermes, F. Hirzebruch, M. Koecher, K. Mainzer, J. Neukirch, A. Prestel, R. Remmert<br><em>(GTM 123) “Numbers”</em></p>
+<p>B.A. Dubrovin, A.T. Fomenko, S.P. Novikov<br><em>(GTM 124) “Modern Geometry — Methods and Applications Part III: Introduction to Homology Theory”</em></p>
+<p>Carlos A. Berenstein, Roger Gay<br><em>(GTM 125) “Complex Variables: An Introduction”</em></p>
+<p>Armand Borel<br><em>(GTM 126) “Linear Algebraic Groups”</em></p>
+<p>William S. Massey<br><em>(GTM 127) “A Basic Course in Algebraic Topology”</em></p>
+<p>Jeffrey Rauch<br><em>(GTM 128) “Partial Differential Equations”</em></p>
+<p>William Fulton, Joe Harris<br><em>(GTM 129) “Representation Theory: A First Course”</em></p>
+<p>C.T.J. Dodson, T. Poston<br><em>(GTM 130) “Tensor Geometry: The Geometric Viewpoint and its Uses”</em></p>
+<p>T.Y. Lam<br><em>(GTM 131) “A First Course in Noncommutative Rings”</em></p>
+<p>Alan F. Beardon<br><em>(GTM 132) “Iteration of Rational Functions: Complex Analytic Dynamical Systems”</em></p>
+<p>Joe Harris<br><em>(GTM 133) “Algebraic Geometry”</em></p>
+<p>Steven Roman<br><em>(GTM 134) “Coding and Information Theory”</em></p>
+<p>Steven Roman<br><em>(GTM 135) “Advanced Linear Algebra”</em></p>
+<p>William Adkins, Steven Weintraub<br><em>(GTM 136) “Algebra: An Approach via Module Theory”</em></p>
+<p>Sheldon Axler, Paul Bourdon, Wade Ramey<br><em>(GTM 137) “Harmonic Function Theory”</em></p>
+<p>Henri Cohen<br><em>(GTM 138) “A Course in Computational Algebraic Number Theory”</em></p>
+<p>Glen E. Bredon<br><em>(GTM 139) “Topology and Geometry”</em></p>
+<p>Jean-Pierre Aubin<br><em>(GTM 140) “Optima and Equilibria”</em></p>
+<p>Thomas Becker, Volker Weispfenning<br><em>(GTM 141) “Gröbner Bases: A Computational Approach to Commutative Algebra”</em></p>
+<p>Serge Lang<br><em>(GTM 142) “Real and Functional Analysis”</em></p>
+<p>J.L. Doob<br><em>(GTM 143) “Measure Theory”</em></p>
+<p>Benson Farb, R. Keith Dennis<br><em>(GTM 144) “Noncommutative Algebra”</em></p>
+<p>James W. Vick<br><em>(GTM 145) “Homology Theory: An Introduction to Algebraic Topology”</em></p>
+<p>Douglas S. Bridges<br><em>(GTM 146) “Computability: A Mathematical Sketchbook”</em></p>
+<p>Jonathan Rosenberg<br><em>(GTM 147) “Algebraic K-Theory and Its Applications”</em></p>
+<p>Joseph J. Rotman<br><em>(GTM 148) “An Introduction to the Theory of Groups”</em></p>
+<p>John G. Ratcliffe<br><em>(GTM 149) “Foundations of Hyperbolic Manifolds”</em></p>
+<p>David Eisenbud<br><em>(GTM 150) “Commutative Algebra: with a View Toward Algebraic Geometry”</em></p>
+<p>Joseph H. Silverman<br><em>(GTM 151) “Advanced Topics in the Arithmetic of Elliptic Curves”</em></p>
+<p>Günter M. Ziegler<br><em>(GTM 152) “Lectures on Polytopes”</em></p>
+<p>William Fulton<br><em>(GTM 153) “Algebraic Topology: A First Course”</em></p>
+<p>Arlen Brown, Carl Pearcy<br><em>(GTM 154) “An Introduction to Analysis”</em></p>
+<p>Christian Kassel<br><em>(GTM 155) “Quantum Groups”</em></p>
+<p>Alexander S. Kechris<br><em>(GTM 156) “Classical Descriptive Set Theory”</em></p>
+<p>Paul Malliavin<br><em>(GTM 157) “Integration and Probability”</em></p>
+<p>Steven Roman<br><em>(GTM 158) “Field Theory”</em></p>
+<p>John B. Conway<br><em>(GTM 159) “Functions of One Complex Variable II”</em></p>
+<p>Serge Lang<br><em>(GTM 160) “Differential and Riemannian Manifolds”</em></p>
+<p>Peter Borwein, Tamas Erdelyi<br><em>(GTM 161) “Polynomials and Polynomial Inequalities”</em></p>
+<p>J.L. Alperin, Rowen B. Bell<br><em>(GTM 162) “Groups and Representations”</em></p>
+<p>John D. Dixon, Brian Mortimer<br><em>(GTM 163) “Permutation Groups”</em></p>
+<p>Melvyn B. Nathanson<br><em>(GTM 164) “Additive Number Theory: The Classical Bases”</em></p>
+<p>Melvyn B. Nathanson<br><em>(GTM 165) “Additive Number Theory: Inverse Problems and the Geometry of Sumsets”</em></p>
+<p>R.W. Sharpe<br><em>(GTM 166) “Differential Geometry: Cartan”s Generalization of Klein”s Erlangen Program”</em></p>
+<p>Patrick Morandi<br><em>(GTM 167) “Field and Galois Theory”</em></p>
+<p>Guenter Ewald<br><em>(GTM 168) “Combinatorial Convexity and Algebraic Geometry”</em></p>
+<p>Rajendra Bhatia<br><em>(GTM 169) “Matrix Analysis”</em></p>
+<p>Glen E. Bredon<br><em>(GTM 170) “Sheaf Theory”</em></p>
+<p>Peter Petersen<br><em>(GTM 171) “Riemannian Geometry”</em></p>
+<p>Reinhold Remmert<br><em>(GTM 172) “Classical Topics in Complex Function Theory”</em></p>
+<p>Reinhard Diestel<br><em>(GTM 173) “Graph Theory”</em></p>
+<p>Douglas S. Bridges<br><em>(GTM 174) “Foundations of Real and Abstract Analysis”</em></p>
+<p>W.B. Raymond Lickorish<br><em>(GTM 175) “An Introduction to Knot Theory”</em></p>
+<p>John M. Lee<br><em>(GTM 176) “Introduction to Riemannian Manifolds”</em></p>
+<p>Donald J. Newman<br><em>(GTM 177) “Analytic Number Theory”</em></p>
+<p>F.H. Clarke, Yu.S. Ledyaev, R.J. Stern, P.R. Wolenski<br><em>(GTM 178) “Nonsmooth Analysis and Control Theory”</em></p>
+<p>Ronald G. Douglas<br><em>(GTM 179) “Banach Algebra Techniques in Operator Theory”</em></p>
+<p>S.M. Srivastava<br><em>(GTM 180) “A Course on Borel Sets”</em></p>
+<p>Rainer Kress<br><em>(GTM 181) “Numerical Analysis”</em></p>
+<p>Wolfgang Walter<br><em>(GTM 182) “Ordinary Differential Equations”</em></p>
+<p>Robert E. Megginson<br><em>(GTM 183) “An Introduction to Banach Space Theory”</em></p>
+<p>Béla Bollobás<br><em>(GTM 184) “Modern Graph Theory”</em></p>
+<p>David A. Cox, John Little, Donal O’Shea<br><em>(GTM 185) “Using Algebraic Geometry”</em></p>
+<p>Dinakar Ramakrishnan, Robert J. Valenza<br><em>(GTM 186) “Fourier Analysis on Number Fields”</em></p>
+<p>Joe Harris, Ian Morrison<br><em>(GTM 187) “Moduli of Curves”</em></p>
+<p>Robert Goldblatt<br><em>(GTM 188) “Lectures on the Hyperreals: An Introduction to Nonstandard Analysis”</em></p>
+<p>T. Y. Lam<br><em>(GTM 189) “Lectures on Modules and Rings”</em></p>
+<p>M. Ram Murty, Jody Esmonde<br><em>(GTM 190) “Problems in Algebraic Number Theory”</em></p>
+<p>Serge Lang<br><em>(GTM 191) “Fundamentals of Differential Geometry”</em></p>
+<p>Francis Hirsch, Gilles Lacombe<br><em>(GTM 192) “Elements of Functional Analysis”</em></p>
+<p>Henri Cohen<br><em>(GTM 193) “Advanced Topics in Computational Number Theory”</em></p>
+<p>Klaus-Jochen Engel, Rainer Nagel<br><em>(GTM 194) “One-Parameter Semigroups for Linear Evolution Equations”</em></p>
+<p>Melvyn B. Nathanson<br><em>(GTM 195) “Elementary Methods in Number Theory”</em></p>
+<p>M. Scott Osborne<br><em>(GTM 196) “Basic Homological Algebra”</em></p>
+<p>David Eisenbud, Joe Harris<br><em>(GTM 197) “The Geometry of Schemes”</em></p>
+<p>Alain M. Robert<br><em>(GTM 198) “A Course in p-adic Analysis”</em></p>
+<p>Hakan Hedenmalm, Boris Korenblum, Kehe Zhu<br><em>(GTM 199) “Theory of Bergman Spaces”</em></p>
+<p>D. Bao, S.-S. Chern, Z. Shen<br><em>(GTM 200) “An Introduction to Riemann-Finsler Geometry”</em></p>
+<p>Marc Hindry, Joseph H. Silverman<br><em>(GTM 201) “Diophantine Geometry”</em></p>
+<p>John M. Lee<br><em>(GTM 202) “Introduction to Topological Manifolds”</em></p>
+<p>Bruce E. Sagan<br><em>(GTM 203) “The Symmetric Group: Representations, Combinatorial Algorithms, and Symmetric Functions”</em></p>
+<p>Jean-Pierre Escofier<br><em>(GTM 204) “Galois Theory”</em></p>
+<p>Yves Félix, Stephen Halperin, Jean-Claude Thomas<br><em>(GTM 205) “Rational Homotopy Theory”</em></p>
+<p>M. Ram Murty<br><em>(GTM 206) “Problems in Analytic Number Theory”</em></p>
+<p>Chris Godsil, Gordon Royle<br><em>(GTM 207) “Algebraic Graph Theory”</em></p>
+<p>Ward Cheney<br><em>(GTM 208) “Analysis for Applied Mathematics”</em></p>
+<p>William Arveson<br><em>(GTM 209) “A Short Course on Spectral Theory”</em></p>
+<p>Michael Rosen<br><em>(GTM 210) “Number Theory in Function Fields”</em></p>
+<p>Serge Lang<br><em>(GTM 211) “Algebra”</em></p>
+<p>Jiří Matoušek<br><em>(GTM 212) “Lectures on Discrete Geometry”</em></p>
+<p>Klaus Fritzsche, Hans Grauert<br><em>(GTM 213) “From Holomorphic Functions to Complex Manifolds”</em></p>
+<p>Jürgen Jost<br><em>(GTM 214) “Partial Differential Equations”</em></p>
+<p>David M. Goldschmidt<br><em>(GTM 215) “Algebraic Functions and Projective Curves”</em></p>
+<p>Denis Serre<br><em>(GTM 216) “Matrices: Theory and Applications”</em></p>
+<p>David Marker<br><em>(GTM 217) “Model Theory: An Introduction”</em></p>
+<p>John M. Lee<br><em>(GTM 218) “Introduction to Smooth Manifolds”</em></p>
+<p>Colin Maclachlan, Alan W. Reid<br><em>(GTM 219) “The Arithmetic of Hyperbolic 3-Manifolds”</em></p>
+<p>Jet Nestruev<br><em>(GTM 220) “Smooth Manifolds and Observables”</em></p>
+<p>Branko Grünbaum<br><em>(GTM 221) “Convex Polytopes”</em></p>
+<p>Brian C. Hall<br><em>(GTM 222) “Lie Groups, Lie Algebras, and Representations: An Elementary Introduction”</em></p>
+<p>Anders Vretblad<br><em>(GTM 223) “Fourier Analysis and its Applications”</em></p>
+<p>Gerard Walschap<br><em>(GTM 224) “Metric Structures in Differential Geometry”</em></p>
+<p>Daniel Bump<br><em>(GTM 225) “Lie Groups”</em></p>
+<p>Kehe Zhu<br><em>(GTM 226) “Spaces of Holomorphic Functions in the Unit Ball”</em></p>
+<p>Ezra Miller, Bernd Sturmfels<br><em>(GTM 227) “Combinatorial Commutative Algebra”</em></p>
+<p>Fred Diamond, Jerry Shurman<br><em>(GTM 228) “A First Course in Modular Forms”</em></p>
+<p>David Eisenbud<br><em>(GTM 229) “The Geometry of Syzygies: A Second Course in Algebraic Geometry and Commutative Algebra”</em></p>
+<p>Daniel W. Stroock<br><em>(GTM 230) “An Introduction to Markov Processes”</em></p>
+<p>Anders Björner, Francisco Brenti<br><em>(GTM 231) “Combinatorics of Coxeter Groups”</em></p>
+<p>Graham Everest, Thomas Ward<br><em>(GTM 232) “An Introduction to Number Theory”</em></p>
+<p>Fernando Albiac, Nigel J. Kalton<br><em>(GTM 233) “Topics in Banach Space Theory”</em></p>
+<p>Palle E.T. Jorgensen<br><em>(GTM 234) “Analysis and Probability: Wavelets, Signals, Fractals”</em></p>
+<p>Mark R. Sepanski<br><em>(GTM 235) “Compact Lie Groups”</em></p>
+<p>John B. Garnett<br><em>(GTM 236) “Bounded Analytic Functions”</em></p>
+<p>Rubén A. Martínez-Avendaño, Peter Rosenthal<br><em>(GTM 237) “An Introduction to Operators on the Hardy-Hilbert Space”</em></p>
+<p>Martin Aigner<br><em>(GTM 238) “A Course in Enumeration”</em></p>
+<p>Henri Cohen<br><em>(GTM 239) “Number Theory — Volume I: Tools and Diophantine Equations”</em></p>
+<p>Henri Cohen<br><em>(GTM 240) “Number Theory — Volume II: Analytic and Modern Tools”</em></p>
+<p>Joseph H. Silverman<br><em>(GTM 241) “The Arithmetic of Dynamical Systems”</em></p>
+<p>Pierre Antoine Grillet<br><em>(GTM 242) “Abstract Algebra”</em></p>
+<p>Ross Geoghegan<br><em>(GTM 243) “Topological Methods in Group Theory”</em></p>
+<p>J.A. Bondy, U.S.R. Murty<br><em>(GTM 244) “Graph Theory”</em></p>
+<p>Rubí E. Rodríguez, Irwin Kra, Jane P. Gilman<br><em>(GTM 245) “Complex Analysis: In the Spirit of Lipman Bers”</em></p>
+<p>Eberhard Kaniuth<br><em>(GTM 246) “A Course in Commutative Banach Algebras”</em></p>
+<p>Christian Kassel, Vladimir Turaev<br><em>(GTM 247) “Braid Groups”</em></p>
+<p>Peter Abramenko, Kenneth S. Brown<br><em>(GTM 248) “Buildings Theory and Applications”</em></p>
+<p>Loukas Grafakos<br><em>(GTM 249) “Classical Fourier Analysis”</em></p>
+<p>Loukas Grafakos<br><em>(GTM 250) “Modern Fourier Analysis”</em></p>
+<p>Robert A. Wilson<br><em>(GTM 251) “The Finite Simple Groups”</em></p>
+<p>Gerd Grubb<br><em>(GTM 252) “Distributions and Operators”</em></p>
+<p>Barbara D. MacCluer<br><em>(GTM 253) “Elementary Functional Analysis”</em></p>
+<p>Henning Stichtenoth<br><em>(GTM 254) “Algebraic Function Fields and Codes”</em></p>
+<p>Roe Goodman, Nolan R. Wallach<br><em>(GTM 255) “Symmetry, Representations, and Invariants”</em></p>
+<p>Gregor Kemper<br><em>(GTM 256) “A Course in Commutative Algebra”</em></p>
+<p>Robin Hartshorne<br><em>(GTM 257) “Deformation Theory”</em></p>
+<p>Osman Guler<br><em>(GTM 258) “Foundations of Optimization in Finite Dimensions”</em></p>
+<p>Manfred Einsiedler, Thomas Ward<br><em>(GTM 259) “Ergodic Theory: with a view towards Number Theory”</em></p>
+<p>Jürgen Herzog, Hibi Takayuki<br><em>(GTM 260) “Monomial Ideals”</em></p>
+<p>Erhan Cinlar<br><em>(GTM 261) “Probability and Stochastics”</em></p>
+<p>Daniel W. Stroock<br><em>(GTM 262) “Essentials of Integration Theory for Analysis”</em></p>
+<p>Kehe Zhu<br><em>(GTM 263) “Analysis on Fock Spaces”</em></p>
+<p>Francis H. Clarke<br><em>(GTM 264) “Functional Analysis, Calculus of Variations and Optimal Control”</em></p>
+<p>Konrad Schmüdgen<br><em>(GTM 265) “Unbounded Self-adjoint Operators on Hilbert Space”</em></p>
+<p>Jean-Paul Penot<br><em>(GTM 266) “Calculus Without Derivatives”</em></p>
+<p>Brian C. Hall<br><em>(GTM 267) “Quantum Theory for Mathematicians”</em></p>
+<p>Steven G. Krantz<br><em>(GTM 268) “Geometric Analysis of the Bergman Kernel and Metric”</em></p>
+<p>M. Scott Osborne<br><em>(GTM 269) “Locally Convex Spaces”</em></p>
+<p>Steven Weintraub<br><em>(GTM 270) “Fundamentals of Algebraic Topology”</em></p>
+<p>Michele Conforti, Gérard Cornuéjols, Giacomo Zambelli<br><em>(GTM 271) “Integer Programming”</em></p>
+<p>Tanja Eisner, Bálint Farkas, Markus Haase, Rainer Nagel<br><em>(GTM 272) “Operator Theoretic Aspects of Ergodic Theory”</em></p>
+<p>Anatoly Fomenko, Dmitry Fuchs<br><em>(GTM 273) “Homotopical Topology”</em></p>
+<p>Jean-François Le Gall<br><em>(GTM 274) “Brownian Motion, Martingales, and Stochastic Calculus”</em></p>
+<p>Loring W. Tu<br><em>(GTM 275) “Differential Geometry: Connections, Curvature, and Characteristic Classes”</em></p>
+<p>Manfred Einsiedler, Thomas Ward<br><em>(GTM 276) “Functional Analysis, Spectral Theory, and Applications”</em></p>
+<p>Konrad Schmüdgen<br><em>(GTM 277) “The Moment Problem”</em></p>
+<p>William P. Ziemer<br><em>(GTM 278) “Modern Real Analysis”</em></p>
+<p>Jürgen Herzog, Takayuki Hibi, Hidefumi Ohsugi<br><em>(GTM 279) “Binomial Ideals”</em></p>
+<p>Christopher Heil<br><em>(GTM 280) “Introduction to Real Analysis”</em></p>
+<p>Laurenţiu G. Maxim<br><em>(GTM 281) “Intersection Homology &amp; Perverse Sheaves with Applications to Singularities”</em></p>
+<p>Sheldon Axler<br><em>(GTM 282) “Measure, Integration &amp; Real Analysis”</em></p>
+<p>Ibrahim Assem, Flávio U. Coelho<br><em>(GTM 283) “Basic Representation Theory of Algebras”</em></p>
+<p>David Borthwick<br><em>(GTM 284) “Spectral Theory: Basic Concepts and Applications”</em></p>
+<p>Konrad Schmüdgen<br><em>(GTM 285) “An Invitation to Unbounded Representations of ∗-Algebras on Hilbert Space”</em></p>
+<p>Daniel Hug, Wolfgang Weil<br><em>(GTM 286) “Lectures on Convex Geometry”</em></p>
+<p>Richard Beals, Roderick S. C. Wong<br><em>(GTM 287) “Explorations in Complex Functions”</em></p>
+<p>John Voight<br><em>(GTM 288) “Quaternion Algebras”</em></p>
+<p>Jane Hawkins<br><em>(GTM 289) “Ergodic Dynamics: From Basic Theory to Applications”</em></p>
+<p>Omer Egecioglu, Adriano Garsia<br><em>(GTM 290) “Lessons in Enumerative Combinatorics”</em></p>
+<p>Heinz-Dieter Ebbinghaus, Jörg Flum, Wolfgang Thomas<br><em>(GTM 291) “Mathematical Logic”</em></p>
+<p>Rabi Bhattacharya, Edward C. Waymire<br><em>(GTM 292) “Random Walk, Brownian Motion and Martingales”</em></p>
+<p>Rabi Bhattacharya, Edward C. Waymire<br><em>(GTM 293) “Stationary Processes and Discrete Parameter Markov Processes”</em></p>
+<p>Wolfgang Arendt, Karsten Urban<br><em>(GTM 294) “Partial Differential Equations”</em></p>
+<p>Jean-François Le Gall<br><em>(GTM 295) “Measure Theory, Probability, and Stochastic Processes”</em></p>
+<p>Mihran Papikian<br><em>(GTM 296) “Drinfeld Modules”</em></p>
+<p>Steven P. Lalley<br><em>(GTM 297) “Random Walks on Infinite Groups”</em></p>
+<p>Richard Beals, Roderick S. C. Wong<br><em>(GTM 298) “More Explorations in Complex Functions”</em></p>
+<p>Rabi Bhattacharya, Edward C. Waymire<br><em>(GTM 299) “Continuous Parameter Markov Processes and Stochastic Differential Equations”</em></p>
+<p>Jayce R. Getz, Heekyoung Hahn<br><em>(GTM 300) “An Introduction to Automorphic Representations”</em></p>
+<p>David Marker<br><em>(GTM 301) “An Invitation to Mathematical Logic”</em></p>
+<p>Loukas Grafakos<br><em>(GTM 302) “Fundamentals of Fourier Analysis”</em></p>
+<p>张筑生<br>《数学分析新讲（重排本）（第一册）》</p>
+<p>张筑生<br>《数学分析新讲（重排本）（第三册）》</p>
+<p>张筑生<br>《数学分析新讲（重排本）（第二册）》</p>
+<p>林源渠，方企勤<br>《数学分析解题指南》</p>
+<p>刘浩洋，户将，李勇锋，文再文<br>《最优化：建模、算法与理论》</p>
+<p>林源渠<br>《泛函分析学习指南》</p>
+<p>张恭庆，林源渠<br>《泛函分析讲义（第二版）（上）》</p>
+<p>龚昇<br>《简明复分析》</p>
+<p>周民强<br>《调和分析讲义（实变方法）》</p>
+<p>陈维桓，李兴校<br>《黎曼几何引论（上册）》</p>
+<p>陈维桓，李兴校<br>《黎曼几何引论（下册）》</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>数学书单</div>
+      <div>http://example.com/数学书单/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>chenyiwu-bh</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年7月18日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/Definitions/%E5%AE%9A%E4%B9%89-Fourier-%E5%8F%98%E6%8D%A2/" title="定义 Fourier 变换">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">定义 Fourier 变换</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/%E5%8D%9A%E5%AE%A2%E5%86%85%E6%95%B0%E5%AD%A6%E8%AE%B0%E5%8F%B7%E8%AF%B4%E6%98%8E/" title="博客内数学记号说明">
+                        <span class="hidden-mobile">博客内数学记号说明</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate-from-setup">载入天数...</span> <span id="times-from-setup">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
