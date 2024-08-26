@@ -16,15 +16,15 @@
   <meta name="author" content="chenyiwu-bh">
   <meta name="keywords" content="">
   
-    <meta name="description" content="定义 Hardy-Littlewood 极大函数自然语言对函数 $f : \mathbb{R}^n \to \mathbb{R}$ 且 $f \in L^1_{loc}(\mathbb{R}^n)$ ，定义其 Hardy–Littlewood 极大函数为  $$ M[f](x) \triangleq \sup_{r&gt;0}{\frac{1}{m_{Lebesgue}(B(x,r))}\int_{B(">
+    <meta name="description" content="定义 Hardy-Littlewood 极大函数自然语言对函数 $f : \mathbb{R}^n \to \mathbb{R}$ 且 $f \in \mathtip{L^1_{loc}(\mathbb{R}^n)}{\mathbb{R}^n 上的全体局部可积函数}$ ，定义其 Hardy–Littlewood 极大函数为  $$ \bbox[5pt]{ M[f](x) \triangleq \s">
 <meta property="og:type" content="article">
 <meta property="og:title" content="定义 Hardy-Littlewood 极大函数">
 <meta property="og:url" content="http://example.com/Definitions/%E5%AE%9A%E4%B9%89-Hardy-Littlewood-%E6%9E%81%E5%A4%A7%E5%87%BD%E6%95%B0/index.html">
 <meta property="og:site_name" content="chenyiwu-bh&#39;s Blog">
-<meta property="og:description" content="定义 Hardy-Littlewood 极大函数自然语言对函数 $f : \mathbb{R}^n \to \mathbb{R}$ 且 $f \in L^1_{loc}(\mathbb{R}^n)$ ，定义其 Hardy–Littlewood 极大函数为  $$ M[f](x) \triangleq \sup_{r&gt;0}{\frac{1}{m_{Lebesgue}(B(x,r))}\int_{B(">
+<meta property="og:description" content="定义 Hardy-Littlewood 极大函数自然语言对函数 $f : \mathbb{R}^n \to \mathbb{R}$ 且 $f \in \mathtip{L^1_{loc}(\mathbb{R}^n)}{\mathbb{R}^n 上的全体局部可积函数}$ ，定义其 Hardy–Littlewood 极大函数为  $$ \bbox[5pt]{ M[f](x) \triangleq \s">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-07-26T06:47:02.898Z">
-<meta property="article:modified_time" content="2024-08-02T15:50:37.528Z">
+<meta property="article:modified_time" content="2024-08-26T08:38:37.470Z">
 <meta property="article:author" content="chenyiwu-bh">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          103 字
+          128 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -258,12 +258,12 @@
 
 <div class="container-fluid nopadding-x">
   <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
+    <div class="side-col d-none d-lg-block col-lg-0">
       
 
     </div>
 
-    <div class="col-lg-8 nopadding-x-md">
+    <div class="col-lg-9 nopadding-x-md">
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
@@ -272,19 +272,23 @@
             
               <div class="markdown-body">
                 
-                <h1 id="定义-Hardy-Littlewood-极大函数"><a href="#定义-Hardy-Littlewood-极大函数" class="headerlink" title="定义 Hardy-Littlewood 极大函数"></a>定义 Hardy-Littlewood 极大函数</h1><h2 id="自然语言"><a href="#自然语言" class="headerlink" title="自然语言"></a>自然语言</h2><p>对函数 $f : \mathbb{R}^n \to \mathbb{R}$ 且 $f \in L^1_{loc}(\mathbb{R}^n)$ ，定义其 Hardy–Littlewood 极大函数为</p>
+                <h1 id="定义-Hardy-Littlewood-极大函数"><a href="#定义-Hardy-Littlewood-极大函数" class="headerlink" title="定义 Hardy-Littlewood 极大函数"></a>定义 Hardy-Littlewood 极大函数</h1><h2 id="自然语言"><a href="#自然语言" class="headerlink" title="自然语言"></a>自然语言</h2><p>对函数 $f : \mathbb{R}^n \to \mathbb{R}$ 且 $f \in \mathtip{L^1_{loc}(\mathbb{R}^n)}{\mathbb{R}^n 上的全体局部可积函数}$ ，定义其 Hardy–Littlewood 极大函数为</p>
 
 $$
-M[f](x) \triangleq \sup_{r>0}{\frac{1}{m_{Lebesgue}(B(x,r))}\int_{B(x,r)}{|f(y)|}{dy}}
+\bbox[5pt]{
+M[f](x) \triangleq \sup_{r>0}{\frac{1}{\mathtip{m(B(x,r))}{Lebesgue 测度}}\int_{B(x,r)}{|f(y)|}{dy}}
+}
 $$
 
 <p>其中 $B(x_0,r)$ 代表以 $x_0$ 为球心， $r$ 为半径的开球，即</p>
 
 $$
+\bbox[5pt]{
 B(x_0,r) \triangleq \{x \in \mathbb{R}^n \big| |x-x_0| < r\}
+}
 $$
 
-<p>其中 $m_{Lebesgue}$ 代表 Lebesgue 测度</p>
+<p>其中 $\mathtip{m}{Lebesgue 测度}$ 代表 Lebesgue 测度</p>
 
                 
               </div>
@@ -395,7 +399,7 @@ $$
       </div>
     </div>
 
-    <div class="side-col d-none d-lg-block col-lg-2">
+    <div class="side-col d-none d-lg-block col-lg-3">
       
   <aside class="sidebar" style="margin-left: -1rem">
     <div id="toc">

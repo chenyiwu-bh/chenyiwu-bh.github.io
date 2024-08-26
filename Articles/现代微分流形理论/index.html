@@ -1,0 +1,1515 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="chenyiwu-bh">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="纯粹地去重复叙述定义与定理是一种很枯燥的学习方式，因此在介绍现代微分流形理论的同时，我们将预先确定一条主线任务，即尝试从数学上构建我们所熟悉的球面，并研究其上的一些性质，从而加深对于理论的理解。 先从集合上定义二维单位球面  $$ \bbox[5pt]{ S^2 \triangleq \{(x,y,z) \in \mathbb{R}^3 \big| x^2+y^2+z^2&#x3D;1\} } $$  接下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="现代微分流形理论">
+<meta property="og:url" content="http://example.com/Articles/%E7%8E%B0%E4%BB%A3%E5%BE%AE%E5%88%86%E6%B5%81%E5%BD%A2%E7%90%86%E8%AE%BA/index.html">
+<meta property="og:site_name" content="chenyiwu-bh&#39;s Blog">
+<meta property="og:description" content="纯粹地去重复叙述定义与定理是一种很枯燥的学习方式，因此在介绍现代微分流形理论的同时，我们将预先确定一条主线任务，即尝试从数学上构建我们所熟悉的球面，并研究其上的一些性质，从而加深对于理论的理解。 先从集合上定义二维单位球面  $$ \bbox[5pt]{ S^2 \triangleq \{(x,y,z) \in \mathbb{R}^3 \big| x^2+y^2+z^2&#x3D;1\} } $$  接下">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-08-05T01:57:54.498Z">
+<meta property="article:modified_time" content="2024-08-26T08:38:37.583Z">
+<meta property="article:author" content="chenyiwu-bh">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>现代微分流形理论 - chenyiwu-bh&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>摸鱼的数学分析学生</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="现代微分流形理论"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-08-05 09:57" pubdate>
+          2024年8月5日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          8.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          71 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-0">
+      
+
+    </div>
+
+    <div class="col-lg-9 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">现代微分流形理论</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>纯粹地去重复叙述定义与定理是一种很枯燥的学习方式，因此在介绍现代微分流形理论的同时，我们将预先确定一条主线任务，即尝试从数学上构建我们所熟悉的球面，并研究其上的一些性质，从而加深对于理论的理解。</p>
+<p>先从集合上定义二维单位球面</p>
+
+$$
+\bbox[5pt]{
+S^2 \triangleq \{(x,y,z) \in \mathbb{R}^3 \big| x^2+y^2+z^2=1\}
+}
+$$
+
+<p>接下来我们的所有内容都将围绕它展开</p>
+<h1 id="第一部分-拓扑"><a href="#第一部分-拓扑" class="headerlink" title="第一部分 拓扑"></a>第一部分 拓扑</h1><h2 id="第一章-拓扑空间"><a href="#第一章-拓扑空间" class="headerlink" title="第一章 拓扑空间"></a>第一章 拓扑空间</h2><h3 id="1-1-拓扑"><a href="#1-1-拓扑" class="headerlink" title="1.1 拓扑"></a>1.1 拓扑</h3><p>拓扑是后续讨论的基础，我们先回顾一下拓扑与拓扑空间的定义</p>
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 拓扑</span></br>
+给定非空集合 $X$ 和其上的子集类 $\mathcal{O} \subset 2^X$ 满足以下三条性质</br>
+（1）（包含空集和全集） $\varnothing \in \mathcal{O} , X \in \mathcal{O}$</br>
+（2）（有限交封闭） $\forall A,B \in \mathcal{O} , A \cap B \in \mathcal{O}$</br>
+（3）（任意并封闭） $\displaystyle \forall \{A_\alpha\} \subset \mathcal{O} , \bigcup_{\alpha}{A_\alpha} \in \mathcal{O}$</br>
+则称子集类 $\mathcal{O} \subset 2^X$ 为集合 $X$ 上的拓扑</br>
+</p>
+
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 拓扑空间</span></br>
+被赋予拓扑 $\mathcal{O}$ 的集合 $X$ 称为拓扑空间，以有序对形式记作 $(X,\mathcal{O})$</br>
+</p>
+
+<p>有了拓扑与拓扑空间的概念之后，我们就可以定义什么是开集，什么是闭集，再次回顾它们的定义</p>
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 开集</span></br>
+给定拓扑空间 $(X,\mathcal{O})$ 与 $X$ 的子集 $U$</br>
+若 $U \in \mathcal{O}$ ，则称 $U$ 为 $X$ 中的开集</br>
+</p>
+
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 闭集</span></br>
+给定拓扑空间 $(X,\mathcal{O})$ 与 $X$ 的子集 $U$</br>
+若 $X \backslash U \in \mathcal{O}$ ，则称 $U$ 为 $X$ 中的闭集</br>
+</p>
+
+<p>拓扑空间中的开集与闭集满足以下的性质</p>
+<p class='note note-theorem'>
+<span style='font-size: 150%; font-weight: bold'>定理 拓扑空间中的开集与闭集的性质</span></br>
+给定拓扑空间 $(X,\mathcal{O})$</br>
+（1）（空集与全集是开集） $\varnothing, X$ 都是开集</br>
+（2）（空集与全集是闭集） $\varnothing, X$ 都是闭集</br>
+（3）（开集的有限交是开集） $X$ 的任意开集列 $\{A_n\}_{n \in \mathbb{N}}$ ，成立 $\displaystyle \bigcap_{n=1}^{\infty}{A_n}$ 是开集</br>
+（4）（开集的任意并是开集） $X$ 的任意开集类 $\{A_\alpha\}_{\alpha \in I}$ ，成立 $\displaystyle \bigcup_{\alpha \in I}{A_\alpha}$ 是开集</br>
+（5）（闭集的有限并是闭集） $X$ 的任意闭集列 $\{A_n\}_{n \in \mathbb{N}}$ ，成立 $\displaystyle \bigcup_{n=1}^{\infty}{A_n}$ 是闭集</br>
+（6）（闭集的任意交是闭集） $X$ 的任意闭集类 $\{A_\alpha\}_{\alpha \in I}$ ，成立 $\displaystyle \bigcap_{\alpha \in I}{A_\alpha}$ 是闭集</br>
+</p>
+
+<p>接下来我们细致研究开集与闭集的性质，即回顾内点、邻域、内部、聚点、导集、闭包这几个概念的定义。</p>
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 内点</span></br>
+给定拓扑空间 $(X,\mathcal{O})$ 与 $X$ 的子集 $A$ 与 $A$ 中的点 $x$</br>
+若存在 $X$ 中的开集 $U$ 成立</br>
+
+$$
+\bbox[5pt]{
+x \in U \subset A
+}
+$$
+
+则称 $x$ 是 $A$ 的内点</br>
+</p>
+
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 邻域</span></br>
+给定拓扑空间 $(X,\mathcal{O})$ 与 $X$ 的子集 $A$ 与 $A$ 中的点 $x$</br>
+称 $A$ 是 $x$ 的邻域当且仅当 $x$ 是 $A$ 的内点</br>
+</p>
+
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 内部</span></br>
+给定拓扑空间 $(X,\mathcal{O})$ 与 $X$ 的子集 $A$</br>
+$A$ 中所有内点构成的集合称作 $A$ 的内部，记作 $\text{Int}(A)$</br>
+</p>
+
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 聚点</span></br>
+给定拓扑空间 $(X,\mathcal{O})$ 与 $X$ 的子集 $A$ 与 $X$ 中的点 $x$</br>
+若对于 $x$ 的任意邻域 $U$ 成立</br>
+
+$$
+\bbox[5pt]{
+A \cap (U \backslash \{x\}) \neq \varnothing
+}
+$$
+
+则称 $x$ 是 $A$ 的聚点</br>
+</p>
+
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 导集</span></br>
+给定拓扑空间 $(X,\mathcal{O})$ 与 $X$ 的子集 $A$</br>
+$A$ 中所有聚点构成的集合称作 $A$ 的导集，记作 $A'$</br>
+</p>
+
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 闭包</span></br>
+给定拓扑空间 $(X,\mathcal{O})$ 与 $X$ 的子集 $A$</br>
+$A$ 的闭包定义为</br>
+
+$$
+\bbox[5pt]{
+\overline{A} \triangleq A \cup A'
+}
+$$
+
+</p>
+
+<p>拓扑空间中对集合取内部与取闭包的这两种运算满足如下性质</p>
+<p class='note note-theorem'>
+<span style='font-size: 150%; font-weight: bold'>拓扑空间中集合取内部与取闭包的运算性质</span></br>
+给定拓扑空间 $(X,\mathcal{O})$ 与 $X$ 的子集 $A,B$</br>
+（1） $A \subset B \implies \text{Int}(A) \subset \text{Int}(B)$</br>
+（2） $A \subset B \implies \overline{A} \subset \overline{B}$</br>
+（3） $\text{Int}(A) = A \iff A \text{ 是 } X \text{ 中的开集}$</br>
+（4） $\overline{A} = A \iff A \text{ 是 } X \text{ 中的闭集}$</br>
+（5） $\text{Int}(A \cap B) = \text{Int}(A) \cap \text{Int}(B)$</br>
+（6） $\text{Int}(A \cup B) \supset \text{Int}(A) \cup \text{Int}(B)$</br>
+（7） $\overline{A \cap B} \subset \overline{A} \cap \overline{B}$</br>
+（8） $\overline{A \cup B} = \overline{A} \cup \overline{B}$</br>
+（9） $\text{Int}(A) \cap (X \backslash \overline{A}) = \varnothing$</br>
+（10） $\text{Int}(A) \cup (X \backslash \overline{A}) = X$</br>
+（11） $\displaystyle \text{Int}(A) = \bigcup_{S \subset A \text{ 为 } X \text{ 中的开集}}{S}$</br>
+（12） $\displaystyle \overline{A} = \bigcap_{S \supset A \text{ 为 } X \text{ 中的闭集}}{S}$</br>
+</p>
+
+<h3 id="1-2-子拓扑"><a href="#1-2-子拓扑" class="headerlink" title="1.2 子拓扑"></a>1.2 子拓扑</h3><p>对于一个给定的拓扑空间 $(X,\mathcal{O})$ 以及 $X$ 的子集 $A$ ，我们可以根据 $X$ 上的拓扑自然去诱导 $A$ 上的拓扑，称为子拓扑，对应生成的拓扑空间称为子拓扑空间</p>
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 子拓扑</span></br>
+给定拓扑空间 $(X,\mathcal{O})$ 与 $X$ 的非空子集 $A$ </br>
+定义 $A$ 上的子集类 $\mathcal{O}_A \subset 2^A$ 为</br>
+
+$$
+\bbox[5pt]{
+\mathcal{O}_A \triangleq \{U \cap A \big| U \in \mathcal{O}\}
+}
+$$
+
+则 $\mathcal{O}_A$ 为 $A$ 上的拓扑，称为拓扑空间 $(X,\mathcal{O})$ 中关于子集 $A$ 的子拓扑</br>
+</p>
+
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 子拓扑空间</span></br>
+给定拓扑空间 $(X,\mathcal{O})$ 与 $X$ 的非空子集 $A$ ，并如上定义拓扑</br>
+称拓扑空间 $(A,\mathcal{O}_A)$ 为拓扑空间 $(X,\mathcal{O})$ 的子拓扑空间</br>
+</p>
+
+<p>需要注意的是之前讨论的开集、闭集、内点、邻域、内部、聚点、导集、闭包这些所有概念都是基于拓扑空间的具体定义的。因此在子拓扑空间中与在原拓扑空间中的这些概念的实体并不完全等同。例如，子拓扑空间中的开集并不一定是原拓扑空间中的开集</p>
+<h3 id="1-3-乘积拓扑"><a href="#1-3-乘积拓扑" class="headerlink" title="1.3 乘积拓扑"></a>1.3 乘积拓扑</h3><p>给定拓扑空间 $(X,\mathcal{O}_X)$ 与拓扑空间 $(Y,\mathcal{O}_Y)$ ，我们可以根据 $X$ 上的拓扑与 $Y$  上的拓扑自然去诱导在 $X$ 与 $Y$ 的 Cartesian 积上的拓扑，成为乘积拓扑，对应生成的拓扑空间称为乘积拓扑空间</p>
+<h3 id="1-4-拓扑空间之间的映射"><a href="#1-4-拓扑空间之间的映射" class="headerlink" title="1.4 拓扑空间之间的映射"></a>1.4 拓扑空间之间的映射</h3><p>给定拓扑空间 $(X,\mathcal{O}_X)$ 与拓扑空间 $(Y,\mathcal{O}_Y)$ ，我们可以为映射 $f : X \to Y$ 赋予连续性以及同胚性的性质，从而建立起两个不同拓扑空间之间的关系。</p>
+<h3 id="1-5-回顾主线任务"><a href="#1-5-回顾主线任务" class="headerlink" title="1.5 回顾主线任务"></a>1.5 回顾主线任务</h3><p>单从集合 $S^2$ 上去考虑构造它的拓扑并不是一件简单的事情，不过幸运的是 $S^2$ 可以看作是 $\mathbb{R}^3$ 的一个子集，于是我们可以通过 $\mathbb{R}^3$ 上的拓扑去诱导 $S^2$ 上的子拓扑。<br>我们先让 $\mathbb{R}^3$ 中的任意开球与 $S^2$ 取交集得到（其中 $B(p,r)$ 为以 $p$ 为球心， $r$ 为半径的开球）</p>
+
+$$
+\bbox[5pt]{
+\mathcal{O}_{0} \triangleq \{S^2 \cap B(p,r) \big| p = (x,y,z) \in S^2 , r > 0\} \cup \{\varnothing\}
+}
+$$
+
+<p>显然 $\mathcal{O}_0$ 还不构成 $S^2$ 上的拓扑，它关于有限交运算或任意并运算都不封闭。但它可以作为一个拓扑基去生成让我们满意的拓扑。</p>
+<h2 id="第二章-分离公理与可数公理"><a href="#第二章-分离公理与可数公理" class="headerlink" title="第二章 分离公理与可数公理"></a>第二章 分离公理与可数公理</h2><h3 id="2-1-分离公理"><a href="#2-1-分离公理" class="headerlink" title="2.1 分离公理"></a>2.1 分离公理</h3><p>拓扑空间</p>
+<h3 id="2-2-可数公理"><a href="#2-2-可数公理" class="headerlink" title="2.2 可数公理"></a>2.2 可数公理</h3><h2 id="第三章-连通性与道路连通性"><a href="#第三章-连通性与道路连通性" class="headerlink" title="第三章 连通性与道路连通性"></a>第三章 连通性与道路连通性</h2><h3 id="3-1-连通性"><a href="#3-1-连通性" class="headerlink" title="3.1 连通性"></a>3.1 连通性</h3><h3 id="3-2-道路与道路连通性"><a href="#3-2-道路与道路连通性" class="headerlink" title="3.2 道路与道路连通性"></a>3.2 道路与道路连通性</h3><h2 id="第四章-基本群"><a href="#第四章-基本群" class="headerlink" title="第四章 基本群"></a>第四章 基本群</h2><h3 id="4-1-基本群"><a href="#4-1-基本群" class="headerlink" title="4.1 基本群"></a>4.1 基本群</h3><h2 id="第五章-同调群"><a href="#第五章-同调群" class="headerlink" title="第五章 同调群"></a>第五章 同调群</h2><h3 id="5-1-链复形"><a href="#5-1-链复形" class="headerlink" title="5.1 链复形"></a>5.1 链复形</h3><h3 id="5-2-单纯同调"><a href="#5-2-单纯同调" class="headerlink" title="5.2 单纯同调"></a>5.2 单纯同调</h3><h3 id="5-3-相对同调"><a href="#5-3-相对同调" class="headerlink" title="5.3 相对同调"></a>5.3 相对同调</h3><h3 id="5-4-奇异同调"><a href="#5-4-奇异同调" class="headerlink" title="5.4 奇异同调"></a>5.4 奇异同调</h3><h1 id="第二部分-流形"><a href="#第二部分-流形" class="headerlink" title="第二部分 流形"></a>第二部分 流形</h1><h2 id="第六章-切向量与切空间"><a href="#第六章-切向量与切空间" class="headerlink" title="第六章 切向量与切空间"></a>第六章 切向量与切空间</h2><h3 id="6-1-光滑流形上的光滑函数与光滑流形间的光滑映射"><a href="#6-1-光滑流形上的光滑函数与光滑流形间的光滑映射" class="headerlink" title="6.1 光滑流形上的光滑函数与光滑流形间的光滑映射"></a>6.1 光滑流形上的光滑函数与光滑流形间的光滑映射</h3>$\mathbb{R}^n$ 上的光滑函数可以非常自然地定义为其任意阶偏导数存在且连续，但在一个光滑流形上，我们则没有办法直接去定义光滑函数。不过因为光滑流形具有局部同胚于 $\mathbb{R}^n$ 的性质，我们可以把光滑流形上的函数拉到 $\mathbb{R}^n$ ，从而可以定义其光滑性。
+
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 光滑流形上的光滑函数</span></br>
+给定 $m$ 维光滑流形 $M = (X,\mathcal{O},\mathscr{A})$</br>
+给定函数 $f : X \to \mathbb{R}$</br>
+若 $\forall (U,\varphi) \in \mathscr{A}$ 为坐标卡成立以下函数</br>
+
+$$
+\bbox[5pt]{
+f \circ \varphi^{-1} : \varphi(U) \subset \mathbb{R}^m \to \mathbb{R}
+}
+$$
+
+为光滑函数</br>
+则称函数 $f : X \to \mathbb{R}$ 为光滑函数</br>
+</p>
+
+<p>流形间的光滑映射亦可同理</p>
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 光滑流形上的光滑映射</span></br>
+给定 $m$ 维光滑流形 $M = (X,\mathcal{O}_M,\mathscr{A}_M)$ 与 $n$ 维光滑流形 $N = (Y,\mathcal{O}_N,\mathscr{A}_N)$</br>
+给定映射 $f : X \to Y$</br>
+若 $\forall (U,\varphi) \in \mathscr{A}_M , \forall (V,\psi) \in \mathscr{A}_N$ 为坐标卡且 $f(U) \subset V$ 成立以下函数</br>
+
+$$
+\bbox[5pt]{
+\psi \circ f \circ \varphi^{-1} : \varphi(U) \subset \mathbb{R}^m \to \psi(V) \subset \mathbb{R}^n
+}
+$$
+
+为光滑映射</br>
+则称映射 $f : X \to Y$ 为光滑映射</br>
+</p>
+
+<p>光滑流形 $M$ 上的全体光滑函数构成线性空间，记作 $C^\infty(M)$<br>给定 $p \in \mathtip{M}{视作集合}$ ，我们也可以在局部上定义在 $p$ 处的光滑函数<br>光滑流形 $M$ 上在 $p$ 处的全体光滑函数构成线性空间，记作 $C^\infty_p(M)$</p>
+<h3 id="6-2-切向量与切空间"><a href="#6-2-切向量与切空间" class="headerlink" title="6.2 切向量与切空间"></a>6.2 切向量与切空间</h3><p>接下来我们将引入切向量的概念，这是现代微分流形理论中的关键概念之一</p>
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 光滑流形上的切向量</span></br>
+给定 $m$ 维光滑流形 $M$</br>
+给定 $p \in \mathtip{M}{视作集合}$ ，定义在 $p$ 处函数 $v_p : \mathtip{C^\infty_p(M)}{M 上在 p 处的全体光滑函数} \to \mathbb{R}$ 且满足以下两条性质</br>
+（1）（线性性） $\forall f,g \in \mathtip{C^\infty_p(M)}{M 上在 p 处的全体光滑函数} , \forall a,b \in \mathbb{R} , v_p(af+bg) = av_p(f)+bv_p(g)$</br>
+（2）（Leibniz 法则） $\forall f,g \in \mathtip{C^\infty_p(M)}{M 上在 p 处的全体光滑函数} , v_p(fg) = v_p(f)g(p)+f(p)v_p(g)$</br>
+则称函数 $v$ 为在光滑流形 $M$ 上 $p$ 处的切向量</br>
+</p>
+
+<p>光滑流形 $M$ 上在 $p$ 处的全体切向量构成线性空间，称为切空间，记作 $T_pM$<br>之后我们将以有序双线性配对的形式来记切向量在光滑函数上的作用，即如下形式</p>
+
+$$
+\bbox[5pt]{
+\mathtip{\langle{v_p,f}\rangle}{\langle{T_pM,C^\infty_p(M)}\rangle\to\mathbb{R}}
+}
+$$
+
+
+<p>切空间 $T_pM$ 是一个线性空间，它自然有一组线性基。<br>例如在 $\mathbb{R}^m$ 中 $p$ 处的切空间显然就有以下的基</p>
+
+$$
+\bbox[5pt]{
+\left.\frac{\partial}{\partial{y^1}}\right|_p , \cdots , \left.\frac{\partial}{\partial{y^m}}\right|_p
+}
+$$
+
+<p>于是 $\mathbb{R}^m$ 上的切空间都是 $m$ 维线性空间，无论是否指定具体在那一点。</p>
+<h3 id="6-3-切映射"><a href="#6-3-切映射" class="headerlink" title="6.3 切映射"></a>6.3 切映射</h3><p>对于光滑流形间的光滑映射，我们可以诱导得到光滑流形的切空间间的映射</p>
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 光滑流形间的切映射</span></br>
+给定 $m$ 维光滑流形 $M$ 与 $n$ 维光滑流形 $N$ 与 $p \in \mathtip{M}{视作集合}$</br>
+给定光滑映射 $F : \mathtip{M}{视作集合} \to \mathtip{N}{视作集合}$</br>
+定义映射 $\underset{*,p}{F} : \mathtip{T_pM}{M 在 p 处的全体切向量} \to \mathtip{T_{F(p)}N}{N 在 F(p) 处的全体切向量}$ 为</br>
+$\forall X_p \in \mathtip{T_pM}{M 在 p 处的全体切向量} , \forall f \in \mathtip{C^\infty_{F(p)}(N)}{N 上在 F(p) 处的全体光滑函数}$ 成立</br>
+
+$$
+\bbox[5pt]{
+\mathtip{\left\langle{\underset{*,p}{F}(X_p),f}\right\rangle}{\langle{T_{F(p)}N,C^\infty_{F(p)}(N)}\rangle\to\mathbb{R}} = \mathtip{\langle{X_p,f \circ F}\rangle}{\langle{T_pM,C^\infty_p(M)}\rangle\to\mathbb{R}}
+}
+$$
+
+则称映射 $\underset{*,p}{F}$ 为光滑映射 $F$ 诱导的切映射</br>
+</p>
+
+<p>可以证明切映射一定是线性映射，因此切映射将保持两个切空间的基的对应。根据切映射定义，我们能就自然的将 $\mathbb{R}^m$ 上切空间的一组基自然地通过坐标卡映射的逆映射诱导出的切映射给映射为 $m$ 维光滑流形上切空间的一组基。</p>
+<p>给定 $m$ 维光滑流形 $M$ 与 $p \in \mathtip{M}{视作集合}$<br>给定 $p$ 处的一个坐标卡 $(U,\varphi=(x^1,\cdots,x^m))$<br>给定 $\mathbb{R}^m$ 中 $\varphi(p)$ 处的切空间的一组基为</p>
+
+$$
+\bbox[5pt]{
+\left.\frac{\partial}{\partial{y^1}}\right|_{\varphi(p)} , \cdots , \left.\frac{\partial}{\partial{y^m}}\right|_{\varphi(p)}
+}
+$$
+
+<p>那么 $M$ 中 $p$ 处的切空间的一组基为</p>
+
+$$
+\bbox[5pt]{
+\underset{*,\varphi(p)}{\varphi^{-1}}\left(\left.\frac{\partial}{\partial{y^1}}\right|_{\varphi(p)}\right) , \cdots , \underset{*,\varphi(p)}{\varphi^{-1}}\left(\left.\frac{\partial}{\partial{y^m}}\right|_{\varphi(p)}\right)
+}
+$$
+
+<p>我们可以把它们简记作</p>
+
+$$
+\bbox[5pt]{
+\left.\frac{\partial}{\partial{x^1}}\right|_p , \cdots , \left.\frac{\partial}{\partial{x^m}}\right|_p
+}
+$$
+
+<p>但在运算时我们必须要注意， $\forall f \in \mathtip{C^\infty_p(M)}{M 上在 p 处的全体光滑函数}$ ，</p>
+
+$$
+\bbox[5pt]{
+\begin{aligned}
+& \mathtip{\left\langle{\left.\frac{\partial}{\partial{x^1}}\right|_p,f}\right\rangle}{T_pM,C^\infty_p(M)\to\mathbb{R}} \\
+= & \mathtip{\left\langle{\underset{*,\varphi(p)}{\varphi^{-1}}\left(\left.\frac{\partial}{\partial{y^1}}\right|_{\varphi(p)}\right),f}\right\rangle}{T_pM,C^\infty_p(M)\to\mathbb{R}} \\
+\mathtip{\color{skyblue}{=}}{定义: \underset{*,\varphi(p)}{\varphi^{-1}}} & \mathtip{\left\langle{\left.\frac{\partial}{\partial{y^1}}\right|_{\varphi(p)},f\circ\varphi^{-1}}\right\rangle}{T_{\varphi(p)}\mathbb{R}^m,C^\infty_{\varphi(p)}(\mathbb{R}^m)\to\mathbb{R}}
+\end{aligned}
+}
+$$
+
+
+<p>于是我们得到以下定理</p>
+<p class='note note-theorem'>
+<span style='font-size: 150%; font-weight: bold'>定理 光滑流形上切空间的一组基</span></br>
+给定 $m$ 维光滑流形 $M$ 与 $p \in \mathtip{M}{视作集合}$</br>
+给定 $p$ 处的一个坐标卡 $(U,\varphi=(x^1,\cdots,x^m))$</br>
+那么 $M$ 中 $p$ 处的切空间的一组基为</br>
+
+$$
+\bbox[5pt]{
+\left.\frac{\partial}{\partial{x^1}}\right|_p , \cdots , \left.\frac{\partial}{\partial{x^m}}\right|_p
+}
+$$
+
+特别地， $\dim(T_pM) = m$</br>
+</p>
+
+<p>我们把上述的基称为光滑流形 $M$ 上 $p$ 处切空间的标准基<br>故 $m$ 维光滑流形 $M$ 的切空间都是 $m$ 维线性空间，无论是否指定具体在那一点。</p>
+<h3 id="6-4-光滑切向量场"><a href="#6-4-光滑切向量场" class="headerlink" title="6.4 光滑切向量场"></a>6.4 光滑切向量场</h3><p>切向量只在光滑流形上的一点处定义，如果我们在光滑流形上每一点都定义一个切向量，我们就将得到一个切向量场。以下我们记</p>
+
+$$
+\bbox[5pt]{
+\mathtip{TM}{视作集合} \triangleq \bigcup_{p\in\mathtip{M}{视作集合}}{\mathtip{T_pM}{M 上在 p 处的全体切向量}}
+}
+$$
+
+<p>注意在以上的并集运算中，我们把在不同点处的切空间中的切向量看作是不同的切向量。</p>
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 光滑流形上的切向量场</span></br>
+给定 $m$ 维光滑流形 $M$</br>
+定义函数 $X : \mathtip{M}{视作集合} \to \mathtip{TM}{视作集合}$ 成立</br>
+$\forall p \in \mathtip{M}{视作集合}$</br>
+
+$$
+\bbox[5pt]{
+X_p \triangleq X(p) \in \mathtip{T_pM}{M 上在 p 处的全体切向量}
+}
+$$
+
+则称函数 $X$ 为在光滑流形 $M$ 上的切向量场</br>
+</p>
+
+<p>根据之前对切空间的基的考察，我们可以定义光滑切向量场</p>
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 光滑流形上的光滑切向量场</span></br>
+给定 $m$ 维光滑流形 $M$ 与 $M$ 上的切向量场 $X$</br>
+若 $\forall p \in \mathtip{M}{视作集合}$ ，存在坐标卡 $(U_p,\varphi_p=(x^1_p,\cdots,x^n_p))$</br>
+以及光滑函数 $a^k_p : U_p \to \mathbb{R} , k \in \mathbb{N} , 1 \leqslant k \leqslant m$ 成立</br>
+
+$$
+\bbox[5pt]{
+X|_{U_p} = \sum_{k=1}^{m}{a^k_p\frac{\partial}{\partial{x^k_p}}}
+}
+$$
+
+则称 $X$ 为光滑流形 $M$ 上的光滑切向量场</br>
+</p>
+
+<p>光滑流形 $M$ 上的全体光滑切向量场构成线性空间，记作 $\mathfrak{X}(M)$</p>
+<p>两个光滑同胚光滑流形间的光滑同胚映射的切映射可以诱导出两个光滑同胚光滑流形间光滑切向量场间的映射，定义如下</p>
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 光滑同胚光滑流形间的切场映射</span></br>
+给定 $m$ 维的光滑同胚光滑流形 $M$ 与光滑流形 $N$</br>
+给定光滑同胚映射 $F : \mathtip{M}{视作集合} \to \mathtip{N}{视作集合}$</br>
+定义映射 $F_* : \mathtip{\mathfrak{X}(M)}{M 上的全体光滑切向量场} \to \mathtip{\mathfrak{X}(N)}{N 上的全体光滑切向量场}$ 为</br>
+$\forall X \in \mathtip{\mathfrak{X}(M)}{M 上的全体光滑切向量场} , \forall p \in \mathtip{N}{视作集合}$ 成立</br>
+
+$$
+\bbox[5pt]{
+F_*(X)(p) \triangleq \underset{*,F^{-1}(p)}{F}(X_{F^{-1}(p)})
+}
+$$
+
+则称映射 $F_*$ 为光滑同胚映射 $F$ 诱导的切场映射</br>
+</p>
+
+<h3 id="6-5-光滑切向量场作用在光滑函数上"><a href="#6-5-光滑切向量场作用在光滑函数上" class="headerlink" title="6.5 光滑切向量场作用在光滑函数上"></a>6.5 光滑切向量场作用在光滑函数上</h3><p>我们可以自然定义光滑切向量场 $X$ 作用在光滑函数 $f$ 上</p>
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 光滑切向量场作用在光滑函数上</span></br>
+给定 $m$ 维光滑流形 $M$ 与 $M$ 上的光滑切向量场 $X$</br>
+给定 $M$ 上的光滑函数 $f$</br>
+定义光滑函数为</br>
+$\forall p \in \mathtip{M}{视作集合}$</br>
+
+$$
+\bbox[5pt]{
+\mathtip{\langle{X,f}\rangle}{\langle{\mathfrak{X}(M),C^\infty(M) }\rangle\to C^\infty(M)}(p) \triangleq \mathtip{\langle{X_p,f}\rangle}{\langle{T_pM,C^\infty_p(M)}\rangle\to\mathbb{R}} = X_pf
+}
+$$
+
+则称 $\mathtip{\langle{X,f}\rangle}{\langle{\mathfrak{X}(M),C^\infty(M) }\rangle\to C^\infty(M)}$ 为 $X$ 作用在 $f$ 上</br>
+</p>
+
+<h2 id="第七章-余切向量与余切空间"><a href="#第七章-余切向量与余切空间" class="headerlink" title="第七章 余切向量与余切空间"></a>第七章 余切向量与余切空间</h2><h3 id="7-1-余切向量与余切空间"><a href="#7-1-余切向量与余切空间" class="headerlink" title="7.1 余切向量与余切空间"></a>7.1 余切向量与余切空间</h3><p>接下来我们将引入余切向量的概念，这是现代微分流形理论中的关键概念之一</p>
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 光滑流形上的余切向量</span></br>
+给定 $m$ 维光滑流形 $M$ 与 $p \in \mathtip{M}{视作集合}$</br>
+则称 $T_pM$ 上的线性函数为光滑流形 $M$ 上在 $p$ 处的余切向量</br>
+</p>
+
+<p>光滑流形 $M$ 上在 $p$ 处的全体余切向量构成线性空间，称为余切空间，记作 $T_p^*M$<br>实际上余切空间就是切空间的对偶空间</p>
+<p>之后我们将以有序双线性配对的形式来记余切向量在切向量上的作用，即如下形式</p>
+
+$$
+\bbox[5pt]{
+\mathtip{\langle{\omega_p,v_p}\rangle}{\langle{T_p^*M,T_pM}\rangle\to\mathbb{R}}
+}
+$$
+
+
+$m$ 维光滑流形 $M$ 的切空间是 $m$ 维线性空间，那么余切空间作为它的对偶空间，也是 $m$ 维线性空间，并且我们可以从切空间的一组基诱导生成余切空间上的一组对偶基。
+
+<h3 id="7-2-光滑映射的微分与余切映射"><a href="#7-2-光滑映射的微分与余切映射" class="headerlink" title="7.2 光滑映射的微分与余切映射"></a>7.2 光滑映射的微分与余切映射</h3><p>对于光滑流形上的光滑函数，我们可以直接诱导得到一个余切向量</p>
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 光滑映射的微分</span></br>
+给定 $m$ 维光滑流形 $M$ 与 $p \in \mathtip{M}{视作集合}$</br>
+给定光滑函数 $f : \mathtip{M}{视作集合} \to \mathbb{R}$</br>
+定义映射 $df|_p : \mathtip{T_pM}{M 上在 p 处的全体切向量} \to \mathbb{R}$ 为</br>
+$\forall X_p \in \mathtip{T_pM}{M 上在 p 处的全体切向量}$ 成立</br>
+
+$$
+\bbox[5pt]{
+\mathtip{\langle{df|_p,X_p}\rangle}{\langle{T_p^*M,T_pM}\rangle\to\mathbb{R}} = \mathtip{\langle{X_p,f}\rangle}{\langle{T_pM,C^\infty_p(M)}\rangle\to\mathbb{R}}
+}
+$$
+
+则称映射 $df|_p$ 为光滑函数 $f$ 在 $p$ 处的微分</br>
+</p>
+
+<p>对于光滑流形间的光滑映射，我们也可以诱导得到光滑流形的余切空间间的映射。</p>
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 光滑流形间的余切映射</span></br>
+给定 $m$ 维光滑流形 $M$ 与 $n$ 维光滑流形 $N$ 与 $p \in \mathtip{M}{视作集合}$</br>
+给定光滑映射 $F : \mathtip{M}{视作集合} \to \mathtip{N}{视作集合}$</br>
+定义映射 $\overset{*,p}{F} : \mathtip{T_{F(p)}^*N}{N 上在 F(p) 处的全体余切向量} \to \mathtip{T_p^*M}{M 上在 p 处的全体余切向量}$ 为</br>
+$\forall \omega_p \in \mathtip{T_{F(p)}^*N}{N 上在 F(p) 处的全体余切向量} , \forall X_p \in \mathtip{T_pM}{M 上在 p 处的全体切向量}$ 成立</br>
+
+$$
+\bbox[5pt]{
+\mathtip{\left\langle{\overset{*,p}{F}(\omega_p),X_p}\right\rangle}{T_p^*M,T_pM\to\mathbb{R}} = \mathtip{\left\langle{\omega_p,\underset{*,p}{F}(X_p)}\right\rangle}{T_{F(p)}^*N,T_{F(p)}N\to\mathbb{R}}
+}
+$$
+
+则称映射 $\overset{*,p}{F}$ 为光滑映射 $F$ 诱导的余切映射</br>
+</p>
+
+<p>现在让我们来考察 $\mathbb{R}^m$ 上 $p$ 处的余切空间的一组基<br>给定 $\mathbb{R}^m$ 上 $p=(p^1,\cdots,p^m)$ 处的切空间的一组基为</p>
+
+$$
+\bbox[5pt]{
+\left.\frac{\partial}{\partial{y^1}}\right|_p , \cdots , \left.\frac{\partial}{\partial{y^m}}\right|_p
+}
+$$
+
+<p>注意到对光滑函数 $y^i(p) = p^i , i \in \mathbb{N} , 1 \leqslant i \leqslant m$ ，它的微分满足</p>
+
+$$
+\bbox[5pt]{
+\begin{aligned}
+& \mathtip{\left\langle{dy^i|_p,\left.\frac{\partial}{\partial{y^j}}\right|_p}\right\rangle}{T_p^*\mathbb{R}^m,T_p\mathbb{R}^m\to\mathbb{R}} \\
+= & \mathtip{\left\langle{\left.\frac{\partial}{\partial{y^j}}\right|_p,y^i}\right\rangle}{T_p\mathbb{R}^m,C^\infty_p(\mathbb{R}^m)\to\mathbb{R}} \\
+= & \delta_{i,j}
+\end{aligned}
+}
+$$
+
+<p>于是 $\mathbb{R}^m$ 上 $p$ 处的余切空间关于切空间的一组对偶基为</p>
+
+$$
+\bbox[5pt]{
+dy^1|_p , \cdots , dy^m|_p
+}
+$$
+
+
+<p>对于光滑流形 $M$ ，我们可以直接根据 $p$ 处切空间的标准基</p>
+
+$$
+\bbox[5pt]{
+\left.\frac{\partial}{\partial{x^1}}\right|_p , \cdots , \left.\frac{\partial}{\partial{x^m}}\right|_p
+}
+$$
+
+<p>定义 $p$ 处余切空间的对偶基为</p>
+
+$$
+\bbox[5pt]{
+dx^1|_p , \cdots , dx^m|_p
+}
+$$
+
+<p>并且满足</p>
+
+$$
+\bbox[5pt]{
+\mathtip{\left\langle{dx^i|_p,\left.\frac{\partial}{\partial{x^j}}\right|_p}\right\rangle}{T_p^*M,T_pM\to\mathbb{R}} = \delta_{i,j}
+}
+$$
+
+
+<p>于是我们得到以下定理</p>
+<p class='note note-theorem'>
+<span style='font-size: 150%; font-weight: bold'>定理 光滑流形上余切空间的一组基</span></br>
+给定 $m$ 维光滑流形 $M$ 与 $p \in \mathtip{M}{视作集合}$</br>
+给定 $p$ 处的一个坐标卡 $(U,\varphi=(x^1,\cdots,x^m))$</br>
+那么 $M$ 中 $p$ 处的余切空间的一组基为</br>
+
+$$
+\bbox[5pt]{
+dx^1|_p , \cdots , dx^m|_p
+}
+$$
+
+特别地， $\dim(T_p^*M) = m$</br>
+</p>
+
+<p>我们把上述的基称为光滑流形 $M$ 上 $p$ 处余切空间的标准基<br>故 $m$ 维光滑流形 $M$ 的余切空间都是 $m$ 维线性空间，无论是否指定具体在那一点。</p>
+<h3 id="7-3-光滑余切向量场"><a href="#7-3-光滑余切向量场" class="headerlink" title="7.3 光滑余切向量场"></a>7.3 光滑余切向量场</h3><p>余切向量只在光滑流形上的一点处有定义，如果我们在光滑流形上每一点都定义一个余切向量，我们就将得到一个余切向量场。以下我们记</p>
+
+$$
+\bbox[5pt]{
+\mathtip{T^*M}{视作集合} \triangleq \bigcup_{p\in\mathtip{M}{视作集合}}{\mathtip{T_p^*M}{M 上在 p 处的全体余切向量}}
+}
+$$
+
+<p>注意在以上的并集运算中，我们把在不同点处的余切空间中的余切向量看作是不同的余切向量。</p>
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 光滑流形上的余切向量场</span></br>
+给定 $m$ 维光滑流形 $M$</br>
+定义函数 $\omega : \mathtip{M}{视作集合} \to \mathtip{T^*M}{视作集合}$ 成立</br>
+$\forall p \in \mathtip{M}{视作集合}$</br>
+
+$$
+\bbox[5pt]{
+\omega_p \triangleq \omega(p) \in \mathtip{T_p^*M}{M 上在 p 处的全体余切向量}
+}
+$$
+
+则称函数 $\omega$ 为在光滑流形 $M$ 上的余切向量场</br>
+</p>
+
+<p>根据之前对余切空间的基的考察，我们可以定义光滑余切向量场</p>
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 光滑流形上的光滑余切向量场</span></br>
+给定 $m$ 维光滑流形 $M$ 与 $M$ 上的余切向量场 $\omega$</br>
+若 $\forall p \in \mathtip{M}{视作集合}$ ，存在坐标卡 $(U_p,\varphi_p=(x^1_p,\cdots,x^n_p))$</br>
+以及光滑函数 $a^k_p : U_p \to \mathbb{R} , k \in \mathbb{N} , 1 \leqslant k \leqslant m$ 成立</br>
+
+$$
+\bbox[5pt]{
+\omega|_{U_p} = \sum_{k=1}^{m}{a^k_pdx^k_p}
+}
+$$
+
+则称 $\omega$ 为光滑流形 $M$ 上的光滑余切向量场</br>
+</p>
+
+<p>光滑流形 $M$ 上的全体光滑余切向量场构成线性空间，记作 $\Omega^1(M)$</p>
+<h2 id="第八章-型切张量与-型切张量空间"><a href="#第八章-型切张量与-型切张量空间" class="headerlink" title="第八章   型切张量与  型切张量空间"></a>第八章  $(r,s)$ 型切张量与 $(r,s)$ 型切张量空间</h2><h3 id="8-1-型切张量与-型切张量空间"><a href="#8-1-型切张量与-型切张量空间" class="headerlink" title="8.1   型切张量与  型切张量空间"></a>8.1  $(r,s)$ 型切张量与 $(r,s)$ 型切张量空间</h3><p>通过对切向量与切空间、余切向量与余切空间的探讨，我们发现可以显然拓宽它们的定义，从而得到 $(r,s)$ 型切张量与 $(r,s)$ 型切张量空间的定义</p>
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 光滑流形上的 $(r,s)$ 型切张量</span></br>
+给定 $m$ 维光滑流形 $M$ 与 $p \in \mathtip{M}{视作集合}$</br>
+定义 $M$ 在 $p$ 处的 $(r,s)$ 型切张量的为一个 $r+s$ 重线性函数</br>
+
+$$
+\bbox[5pt]{
+\tau_p : \underbrace{\mathtip{T_p^*M}{M 上在 p 处的全体余切向量} \times \cdots \times \mathtip{T_p^*M}{M 上在 p 处的全体余切向量}}_{r 个} \times \underbrace{\mathtip{T_pM}{M 上在 p 处的全体切向量} \times \cdots \times \mathtip{T_pM}{M 上在 p 处的全体切向量}}_{s 个} \to \mathbb{R}
+}
+$$
+
+</p>
+
+<p>我们把 $(r,0)$ 型切张量叫做 $r$ 阶逆变切张量，把我们把 $(0,s)$ 型切张量叫做 $s$ 阶协变切张量，之后的切张量空间、切张量场、光切张量场等亦作同样称呼。</p>
+<p>光滑流形 $M$ 上在 $p$ 处的全体 $(r,s)$ 型切张量构成一个线性空间，称作 $(r,s)$ 型切张量空间，记作 $T_p^{r,s}M$<br>显然易得 $\dim{T_p^{r,s}M} = m^{r+s}$ ，并且它有一组基为</p>
+
+$$
+\bbox[5pt]{
+\left\{\left.\frac{\partial}{\partial{x^{i_1}}}\right|_p \otimes \cdots \otimes\left.\frac{\partial}{\partial{x^{i_r}}}\right|_p \otimes dx^{j_1}|_p \otimes \cdots \otimes dx^{j_s}|_p\right\}_{\substack{1 \leqslant i_1 , \cdots , i_r \leqslant m \\ 1 \leqslant j_1 , \cdots , j_s \leqslant m}}
+}
+$$
+
+<p>请注意我们这里用到了 $(T_p^*M)^* \simeq T_pM$ ，即</p>
+
+$$
+\bbox[5pt]{
+\mathtip{\left\langle{\left.\frac{\partial}{\partial{x^i}}\right|_p,dx^j|_p}\right\rangle}{\langle{(T_p^*M)^*,T_p^*M}\rangle\to\mathbb{R}} \triangleq \mathtip{\left\langle{dx^j|_p,\left.\frac{\partial}{\partial{x^i}}\right|_p}\right\rangle}{\langle{T_p^*M,T_pM}\rangle\to\mathbb{R}}
+}
+$$
+
+
+<h3 id="8-2-光滑切张量场"><a href="#8-2-光滑切张量场" class="headerlink" title="8.2 光滑切张量场"></a>8.2 光滑切张量场</h3> $(r,s)$ 型切张量只在光滑流形上的一点处有定义，如果我们在光滑流形上每一点都定义一个 $(r,s)$ 型切张量，我们就将得到一个 $(r,s)$ 型切张量场。以下我们记
+
+$$
+\bbox[5pt]{
+\mathtip{T^{r,s}M}{视作集合} \triangleq \bigcup_{p\in\mathtip{M}{视作集合}}{\mathtip{T_p^{r,s}M}{M 上在 p 处的全体切张量}}
+}
+$$
+
+<p>注意在以上的并集运算中，我们把在不同点处的 $(r,s)$ 型切张量空间中的 $(r,s)$ 型切张量看作是不同的 $(r,s)$ 型切张量。</p>
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 光滑流形上的 $(r,s)$ 型切张量场</span></br>
+给定 $m$ 维光滑流形 $M$</br>
+定义函数 $\tau : \mathtip{M}{视作集合} \to \mathtip{T^{r,s}M}{视作集合}$ 成立</br>
+$\forall p \in \mathtip{M}{视作集合}$</br>
+
+$$
+\bbox[5pt]{
+\tau_p \triangleq \tau(p) \in \mathtip{T_p^{r,s}M}{M 上在 p 处的全体切张量}
+}
+$$
+
+则称函数 $\tau$ 为在光滑流形 $M$ 上的 $(r,s)$ 型切张量场</br>
+</p>
+
+<p>根据之前对切张量空间的基的考察，我们可以定义光滑切张量场</p>
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 光滑流形上的光滑 $(r,s)$ 型切张量场</span></br>
+给定 $m$ 维光滑流形 $M$ 与 $M$ 上的 $(r,s)$ 型切张量场 $\tau$</br>
+若 $\forall p \in \mathtip{M}{视作集合}$ ，存在坐标卡 $(U_p,\varphi_p=(x^1_p,\cdots,x^n_p))$</br>
+以及光滑函数 $a^{\substack{i_1,\cdots,i_r \\ j_1,\cdots,j_s}}_p : U_p \to \mathbb{R}$ 成立</br>
+
+$$
+\bbox[5pt]{
+\tau|_{U_p} = \sum_{\substack{1 \leqslant i_1 , \cdots , i_r \leqslant m \\ 1 \leqslant j_1 , \cdots , j_s \leqslant m}}{a^{\substack{i_1,\cdots,i_r \\ j_1,\cdots,j_s}}_p\left.\frac{\partial}{\partial{x^{i_1}_p}}\right|_p \otimes \cdots \otimes\left.\frac{\partial}{\partial{x^{i_r}_p}}\right|_p \otimes dx^{j_1}_p|_p \otimes \cdots \otimes dx^{j_s}_p|_p}
+}
+$$
+
+则称 $\tau$ 为光滑流形 $M$ 上的 $(r,s)$ 型光滑切张量场</br>
+</p>
+
+<p>光滑流形 $M$ 上的全体光滑 $(r,s)$ 型切张量场构成线性空间，记作 $\mathscr{T}^{r,s}(M)$<br>显然有</p>
+
+$$
+\bbox[5pt]{
+\begin{aligned}
+\mathscr{T}^{0,0}(M) & = C^\infty(M) \\
+\mathscr{T}^{0,1}(M) & = \Omega^1(M) \\
+\mathscr{T}^{1,0}(M) & \simeq \mathfrak{X}(M)
+\end{aligned}
+}
+$$
+
+
+<h3 id="8-3-光滑-型切张量场作用在光滑余切向量场列与光滑切向量场列上"><a href="#8-3-光滑-型切张量场作用在光滑余切向量场列与光滑切向量场列上" class="headerlink" title="8.3 光滑  型切张量场作用在光滑余切向量场列与光滑切向量场列上"></a>8.3 光滑 $(r,s)$ 型切张量场作用在光滑余切向量场列与光滑切向量场列上</h3><p>我们可以自然定义光滑 $(r,s)$ 型切张量场 $\tau$ 作用在光滑余切向量场列 $\{\omega^i\}_{1 \leqslant i \leqslant r}$ 与光滑切向量场列 $\{X^j\}_{1 \leqslant j \leqslant s}$ 上</p>
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 光滑 $(r,s)$ 型切张量场作用在光滑切向量场列与光滑余切向量场列上</span></br>
+给定 $m$ 维光滑流形 $M$ 与 $M$ 上的切张量场 $\tau$</br>
+给定 $M$ 上的光滑余切向量场列 $\{\omega^i\}_{1 \leqslant i \leqslant r}$ 与光滑切向量场列 $\{X^j\}_{1 \leqslant j \leqslant s}$</br>
+定义光滑函数为</br>
+$\forall p \in \mathtip{M}{视作集合}$</br>
+
+$$
+\bbox[5pt]{
+\mathtip{\langle{\tau,(\omega^1,\cdots,\omega^r,X^1,\cdots,X^s)}\rangle}{\langle{\mathscr{T}^{r,s}(M),(\Omega^1(M))^r\times(\mathfrak{X}(M))^s}\rangle \to C^\infty(M)}(p) \triangleq \mathtip{\langle{\tau_p,(\omega^1_p,\cdots,\omega^r_p,X^1_p,\cdots,X^s_p)}\rangle}{\langle{T_p^{r,s}M,(T_p^*M)^r\times(T_pM)^s}\rangle \to \mathbb{R}}
+}
+$$
+
+则称 $\mathtip{\langle{\tau,(\omega^1,\cdots,\omega^r,X^1,\cdots,X^s)}\rangle}{\langle{\mathscr{T}^{r,s}(M),(\Omega^1(M))^r\times(\mathfrak{X}(M))^s}\rangle \to C^\infty(M)}$ 为 $\tau$ 作用在 $\{\omega^i\}_{1 \leqslant i \leqslant r}$ 与 $\{X^j\}_{1 \leqslant j \leqslant s}$ 上</br>
+</p>
+
+<h2 id="第九章-微分形式与流形上的积分"><a href="#第九章-微分形式与流形上的积分" class="headerlink" title="第九章 微分形式与流形上的积分"></a>第九章 微分形式与流形上的积分</h2><h3 id="9-1-微分形式"><a href="#9-1-微分形式" class="headerlink" title="9.1 微分形式"></a>9.1 微分形式</h3><p>为引入光滑流形上的积分，我们需要引入微分形式的概念</p>
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 光滑流形上的微分形式</span></br>
+给定 $m$ 维光滑流形 $M$</br>
+$M$ 上的一个光滑 $s$ 阶交错协变切张量场称为 $M$ 上的一个 $s$ 次微分形式</br>
+</p>
+
+$M$ 上的全体 $s$ 次微分形式构成线性空间，记作 $\Omega^s(M)$
+<p>并记</p>
+
+$$
+\bbox[5pt]{
+\mathtip{\Omega(M)}{视作集合} \triangleq \bigcup_{k=0}^{m}{\mathtip{\Omega^k(M)}{M 上的全体 k 次微分形式}}
+}
+$$
+
+<p>其中 $m = \dim(M)$</p>
+<h3 id="9-2-外微分算子"><a href="#9-2-外微分算子" class="headerlink" title="9.2 外微分算子"></a>9.2 外微分算子</h3><p>为连接不同次的微分形式，我们需要定义外微分算子</p>
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 外微分算子</span></br>
+给定 $m$ 维光滑流形 $M$</br>
+定义映射 $d : \Omega(M) \to \Omega(M)$ 且满足以下五条性质</br>
+（1） $\forall k \in \mathbb{N}\cup\{0\} , d(\Omega^k(M)) \subset \Omega^{k+1}(M)$</br>
+（2） $\forall \omega^1,\omega^2 \in \mathtip{\Omega(M)}{M 上的全体微分形式} , \forall a,b \in \mathbb{R} , d(a\omega^1+b\omega^2) = ad\omega^1+bd\omega^2$</br>
+（3） $\forall \omega^1 \in \Omega^k(M) , \forall \omega^2 \in \Omega(M) , d(\omega^1 \wedge \omega^2) = (d\omega^1)\wedge\omega^2 + (-1)^k\omega^1\wedge(d\omega^2)$</br>
+（4） $\forall f \in \mathtip{\Omega^0(M)}{\mathtip{\Omega(M)}{M 上的全体 0 次微分形式}} = \mathtip{C^\infty(M)}{M 上的全体光滑函数}$ ， $df$ 为 $f$ 的微分</br>
+（5） $d^2 = d \circ d = \mathtip{0}{零映射}$</br>
+则称映射 $d$ 为外微分算子</br>
+</p>
+
+<h3 id="9-3-恰当微分形式与闭微分形式"><a href="#9-3-恰当微分形式与闭微分形式" class="headerlink" title="9.3 恰当微分形式与闭微分形式"></a>9.3 恰当微分形式与闭微分形式</h3><p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 恰当微分形式</span></br>
+给定 $m$ 维光滑流形 $M$</br>
+定义 $M$ 上的全体 $k$ 次恰当微分形式为</br>
+
+$$
+\bbox[5pt]{
+B^k(M) \triangleq \{\omega \in \Omega^k(M) \big| \exists \tau \in \Omega^{k-1}(M) , \omega = d\tau \}
+}
+$$
+
+</p>
+
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 闭微分形式</span></br>
+给定 $m$ 维光滑流形 $M$</br>
+定义 $M$ 上的全体 $k$ 次闭微分形式为</br>
+
+$$
+\bbox[5pt]{
+Z^k(M) \triangleq \{\omega \in \Omega^k(M) \big| d\omega = 0 \}
+}
+$$
+
+</p>
+
+<p>关于恰当微分形式与闭微分形式的更加细致的讨论将引入 De Rham 上同调理论</p>
+<h3 id="9-4-流形上的积分"><a href="#9-4-流形上的积分" class="headerlink" title="9.4 流形上的积分"></a>9.4 流形上的积分</h3><h2 id="第十章-De-Rham-上同调"><a href="#第十章-De-Rham-上同调" class="headerlink" title="第十章 De Rham 上同调"></a>第十章 De Rham 上同调</h2><h3 id="10-1-De-Rham-上同调"><a href="#10-1-De-Rham-上同调" class="headerlink" title="10.1 De Rham 上同调"></a>10.1 De Rham 上同调</h3><h2 id="第十一章-Lie-群与-Lie-代数"><a href="#第十一章-Lie-群与-Lie-代数" class="headerlink" title="第十一章 Lie 群与 Lie 代数"></a>第十一章 Lie 群与 Lie 代数</h2><h3 id="11-1-Lie-群"><a href="#11-1-Lie-群" class="headerlink" title="11.1 Lie 群"></a>11.1 Lie 群</h3><h3 id="11-2-Lie-括号与-Lie-代数"><a href="#11-2-Lie-括号与-Lie-代数" class="headerlink" title="11.2 Lie 括号与 Lie 代数"></a>11.2 Lie 括号与 Lie 代数</h3><p>接下来我们可以引入 Lie 括号，它通过对两个光滑向量场做类似于对称差的操作得到了一个新的光滑向量场。</p>
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 Lie 括号</span></br>
+给定 $m$ 维光滑流形 $M$</br>
+给定 $M$ 上的光滑切向量场 $X,Y$</br>
+定义 $X,Y$ 的 Lie 括号为</br>
+$\forall f \in \mathtip{C^\infty(M)}{M 上的全体光滑函数}$</br>
+
+$$
+\bbox[5pt]{
+\mathtip{\left\langle{\underset{Lie}{[X,Y]},f}\right\rangle}{\mathfrak{X}(M),C^\infty(M) \to C^\infty(M)} \triangleq \mathtip{\langle{X,\mathtip{\langle{Y,f}\rangle}{\mathfrak{X}(M),C^\infty(M) \to C^\infty(M)}}\rangle}{\mathfrak{X}(M),C^\infty(M) \to C^\infty(M)} - \mathtip{\langle{Y,\mathtip{\langle{X,f}\rangle}{\mathfrak{X}(M),C^\infty(M) \to C^\infty(M)}}\rangle}{\mathfrak{X}(M),C^\infty(M) \to C^\infty(M)}
+}
+$$
+
+</p>
+
+<h3 id="11-3-Lie-导数"><a href="#11-3-Lie-导数" class="headerlink" title="11.3 Lie 导数"></a>11.3 Lie 导数</h3><h1 id="第三部分-几何"><a href="#第三部分-几何" class="headerlink" title="第三部分 几何"></a>第三部分 几何</h1><h2 id="第十二章-黎曼度量"><a href="#第十二章-黎曼度量" class="headerlink" title="第十二章 黎曼度量"></a>第十二章 黎曼度量</h2><h3 id="12-1-黎曼度量"><a href="#12-1-黎曼度量" class="headerlink" title="12.1 黎曼度量"></a>12.1 黎曼度量</h3><p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 光滑流形上的黎曼度量</span></br>
+给定 $m$ 维光滑流形 $M$</br>
+称 $M$ 上的一个光滑对称正定二阶协变切张量场为 $M$ 上的黎曼度量</br>
+</p>
+
+<h2 id="第十三章-测地线"><a href="#第十三章-测地线" class="headerlink" title="第十三章 测地线"></a>第十三章 测地线</h2><h3 id="13-1-协变导数"><a href="#13-1-协变导数" class="headerlink" title="13.1 协变导数"></a>13.1 协变导数</h3><h1 id="第四部分-偏微分方程"><a href="#第四部分-偏微分方程" class="headerlink" title="第四部分 偏微分方程"></a>第四部分 偏微分方程</h1><h2 id="第十四章-一阶线性偏微分方程"><a href="#第十四章-一阶线性偏微分方程" class="headerlink" title="第十四章 一阶线性偏微分方程"></a>第十四章 一阶线性偏微分方程</h2><h2 id="第十五章-二阶椭圆型偏微分方程"><a href="#第十五章-二阶椭圆型偏微分方程" class="headerlink" title="第十五章 二阶椭圆型偏微分方程"></a>第十五章 二阶椭圆型偏微分方程</h2><h2 id="第十六章-二阶抛物型偏微分方程"><a href="#第十六章-二阶抛物型偏微分方程" class="headerlink" title="第十六章 二阶抛物型偏微分方程"></a>第十六章 二阶抛物型偏微分方程</h2><h2 id="第十七章-二阶双曲型偏微分方程"><a href="#第十七章-二阶双曲型偏微分方程" class="headerlink" title="第十七章 二阶双曲型偏微分方程"></a>第十七章 二阶双曲型偏微分方程</h2><h2 id="第十八章-非线性偏微分方程"><a href="#第十八章-非线性偏微分方程" class="headerlink" title="第十八章 非线性偏微分方程"></a>第十八章 非线性偏微分方程</h2><h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><h2 id="A-欧氏空间"><a href="#A-欧氏空间" class="headerlink" title="A.  欧氏空间"></a>A. $\mathbb{R}^n$ 欧氏空间</h2><p>先从集合上定义 $\mathbb{R}^n$</p>
+
+$$
+\bbox[5pt]{
+\mathbb{R}^n \triangleq \{x=(x_1,\cdots,x_n) \big| x_i\in\mathbb{R},1 \leqslant i \leqslant n\}
+}
+$$
+
+
+<h3 id="A-1-代数学结构"><a href="#A-1-代数学结构" class="headerlink" title="A.1 代数学结构"></a>A.1 代数学结构</h3>$\mathbb{R}^n$ 最常见的代数学结构是线性结构
+$\mathbb{R}^n$ 上可定义加法与 $\mathbb{R}$ 上的数乘如下
+
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 $\mathbb{R}^n$ 上的线性结构</span></br>
+（1）（加法） $\forall x=(x_1,\cdots,x_n),y=(y_1,\cdots,y_n) \in \mathbb{R}^n$</br>
+
+$$
+\bbox[5pt]{
+x + y = (x_1,\cdots,x_n) + (y_1,\cdots,y_n) \triangleq (x_1+y_1,\cdots,x_n+y_n)
+}
+$$
+
+（2）（数乘） $\forall \alpha\in\mathbb{R} , \forall x=(x_1,\cdots,x_n) \in \mathbb{R}^n$</br>
+
+$$
+\bbox[5pt]{
+\alpha x = \alpha(x_1,\cdots,x_n) = (\alpha x_1,\cdots,\alpha x_n)
+}
+$$
+
+</p>
+
+<p>此时 $\mathbb{R}^n$ 成为线性空间</p>
+<h3 id="A-2-几何学结构"><a href="#A-2-几何学结构" class="headerlink" title="A.2 几何学结构"></a>A.2 几何学结构</h3><h4 id="A-2-1-内积结构"><a href="#A-2-1-内积结构" class="headerlink" title="A.2.1 内积结构"></a>A.2.1 内积结构</h4>$\mathbb{R}^n$ 最常见且最简单的几何学结构是内积结构
+$\mathbb{R}^n$ 上可定义内积如下
+
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 $\mathbb{R}^n$ 上的内积结构</span></br>
+$\forall x=(x_1,\cdots,x_n) , y=(y_1,\cdots,y_n) \in \mathbb{R}^n$</br>
+
+$$
+\bbox[5pt]{
+\langle{x,y}\rangle \triangleq \sum_{k=1}^{n}{x_ky_k}
+}
+$$
+
+</p>
+
+<p>此时 $\mathbb{R}^n$ 成为内积空间</p>
+<h4 id="A-2-2-范数结构"><a href="#A-2-2-范数结构" class="headerlink" title="A.2.2 范数结构"></a>A.2.2 范数结构</h4>$\mathbb{R}^n$ 最常见的范数结构由内积结构诱导生成的
+$\mathbb{R}^n$ 上可定义范数如下
+
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 $\mathbb{R}^n$ 上的范数结构</span></br>
+$\forall x=(x_1,\cdots,x_n) \in \mathbb{R}^n$</br>
+
+$$
+\bbox[5pt]{
+|x| \triangleq \sqrt{\langle{x,x}\rangle} = \sqrt{\sum_{k=1}^{n}{x_k^2}}
+}
+$$
+
+</p>
+
+<p>此时 $\mathbb{R}^n$ 成为赋范线性空间</p>
+<h4 id="A-2-3-度量结构"><a href="#A-2-3-度量结构" class="headerlink" title="A.2.3 度量结构"></a>A.2.3 度量结构</h4>$\mathbb{R}^n$ 最常见的度量结构由范数结构诱导生成的
+$\mathbb{R}^n$ 上可定义度量如下
+
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 $\mathbb{R}^n$ 上的度量结构</span></br>
+$\forall x=(x_1,\cdots,x_n) , y=(y_1,\cdots,y_n) \in \mathbb{R}^n$</br>
+
+$$
+\bbox[5pt]{
+d(x,y) \triangleq |x-y| = \sqrt{\sum_{k=1}^{n}{(x_k-y_k)^2}}
+}
+$$
+
+</p>
+
+<p>我们之后直接用 $|x-y|$ 表示 $\mathbb{R}^n$ 上的度量，即选择性抛弃记号 $d(x,y)$</p>
+<p>此时 $\mathbb{R}^n$ 成为度量空间</p>
+<h3 id="A-3-拓扑学结构"><a href="#A-3-拓扑学结构" class="headerlink" title="A.3 拓扑学结构"></a>A.3 拓扑学结构</h3>$\mathbb{R}^n$ 最常见的拓扑学结构是由 $\mathbb{R}^n$ 中的度量结构诱导生成的拓扑结构
+$\mathbb{R}^n$ 中的开球定义如下
+
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 $\mathbb{R}^n$ 中的开球</span></br>
+$\forall x \in \mathbb{R}^n , \forall r > 0$</br>
+
+$$
+\bbox[5pt]{
+B(x,r) \triangleq \{y \in \mathbb{R}^n \big| |x-y| < r\}
+}
+$$
+
+</p>
+
+<p>则 $\mathbb{R}^n$ 上的拓扑可定义如下</p>
+<p class='note note-definition'>
+<span style='font-size: 150%; font-weight: bold'>定义 $\mathbb{R}^n$ 上的拓扑结构</span></br>
+
+$$
+\bbox[5pt]{
+\mathcal{O}_{\mathbb{R}^n} \triangleq \left\{U \big| U = \bigcup_{\alpha \in I}{B(x_\alpha,r_\alpha)}\right\}
+}
+$$
+
+</p>
+
+<p>此时 $\mathbb{R}^n$ 成为拓扑空间</p>
+<h2 id="B-高等代数"><a href="#B-高等代数" class="headerlink" title="B. 高等代数"></a>B. 高等代数</h2><h2 id="C-数学分析"><a href="#C-数学分析" class="headerlink" title="C. 数学分析"></a>C. 数学分析</h2><h2 id="D-抽象代数"><a href="#D-抽象代数" class="headerlink" title="D. 抽象代数"></a>D. 抽象代数</h2>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Articles/" class="category-chain-item">Articles</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>现代微分流形理论</div>
+      <div>http://example.com/Articles/现代微分流形理论/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>chenyiwu-bh</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年8月5日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/Definitions/%E5%AE%9A%E4%B9%89-%E5%86%85%E7%82%B9/" title="定义 内点">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">定义 内点</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/Topics/%E8%AF%9D%E9%A2%98-%E6%9C%89%E9%99%90%E7%BB%B4%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E4%B8%8A%E4%BA%8C%E9%98%B6%E5%8D%8F%E5%8F%98%E5%BC%A0%E9%87%8F%E4%B8%8E%E7%9F%A9%E9%98%B5%E7%9A%84%E4%B8%80%E4%B8%80%E5%AF%B9%E5%BA%94/" title="话题 有限维线性空间上二阶协变张量与矩阵的一一对应">
+                        <span class="hidden-mobile">话题 有限维线性空间上二阶协变张量与矩阵的一一对应</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-3">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate-from-setup">载入天数...</span> <span id="times-from-setup">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

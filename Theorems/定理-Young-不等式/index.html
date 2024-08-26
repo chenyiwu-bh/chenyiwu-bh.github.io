@@ -16,15 +16,15 @@
   <meta name="author" content="chenyiwu-bh">
   <meta name="keywords" content="">
   
-    <meta name="description" content="定理 Young 不等式给定 $p , q , r \geqslant 1$ 满足 $\frac{1}{p} + \frac{1}{q} &#x3D; 1 + \frac{1}{r}$则 $\forall f \in L^p(\mathbb{R}^n)$ 和 $\forall g \in L^q(\mathbb{R}^n)$成立  $$ \lVert{{f}\ast{g}}\rVert_{L^r(\math">
+    <meta name="description" content="定理 Young 不等式给定 $p , q , r \geqslant 1$ 满足 $\frac{1}{p} + \frac{1}{q} &#x3D; 1 + \frac{1}{r}$则 $\forall f \in \mathtip{L^p(\mathbb{R}^n)}{\mathbb{R}^n 上的全体 p 次可积函数}$ 和 $\forall g \in \mathtip{L^q(\mathbb{R}">
 <meta property="og:type" content="article">
 <meta property="og:title" content="定理 Young 不等式">
 <meta property="og:url" content="http://example.com/Theorems/%E5%AE%9A%E7%90%86-Young-%E4%B8%8D%E7%AD%89%E5%BC%8F/index.html">
 <meta property="og:site_name" content="chenyiwu-bh&#39;s Blog">
-<meta property="og:description" content="定理 Young 不等式给定 $p , q , r \geqslant 1$ 满足 $\frac{1}{p} + \frac{1}{q} &#x3D; 1 + \frac{1}{r}$则 $\forall f \in L^p(\mathbb{R}^n)$ 和 $\forall g \in L^q(\mathbb{R}^n)$成立  $$ \lVert{{f}\ast{g}}\rVert_{L^r(\math">
+<meta property="og:description" content="定理 Young 不等式给定 $p , q , r \geqslant 1$ 满足 $\frac{1}{p} + \frac{1}{q} &#x3D; 1 + \frac{1}{r}$则 $\forall f \in \mathtip{L^p(\mathbb{R}^n)}{\mathbb{R}^n 上的全体 p 次可积函数}$ 和 $\forall g \in \mathtip{L^q(\mathbb{R}">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-07-07T10:25:58.729Z">
-<meta property="article:modified_time" content="2024-08-02T15:50:37.603Z">
+<meta property="article:modified_time" content="2024-08-26T08:38:37.574Z">
 <meta property="article:author" content="chenyiwu-bh">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          942 字
+          1.2k 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          8 分钟
+          11 分钟
         
       </span>
     
@@ -258,12 +258,12 @@
 
 <div class="container-fluid nopadding-x">
   <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
+    <div class="side-col d-none d-lg-block col-lg-0">
       
 
     </div>
 
-    <div class="col-lg-8 nopadding-x-md">
+    <div class="col-lg-9 nopadding-x-md">
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
@@ -272,85 +272,99 @@
             
               <div class="markdown-body">
                 
-                <h1 id="定理-Young-不等式"><a href="#定理-Young-不等式" class="headerlink" title="定理 Young 不等式"></a>定理 Young 不等式</h1><p>给定 $p , q , r \geqslant 1$ 满足 $\frac{1}{p} + \frac{1}{q} = 1 + \frac{1}{r}$<br>则 $\forall f \in L^p(\mathbb{R}^n)$ 和 $\forall g \in L^q(\mathbb{R}^n)$<br>成立</p>
+                <h1 id="定理-Young-不等式"><a href="#定理-Young-不等式" class="headerlink" title="定理 Young 不等式"></a>定理 Young 不等式</h1><p>给定 $p , q , r \geqslant 1$ 满足 $\frac{1}{p} + \frac{1}{q} = 1 + \frac{1}{r}$<br>则 $\forall f \in \mathtip{L^p(\mathbb{R}^n)}{\mathbb{R}^n 上的全体 p 次可积函数}$ 和 $\forall g \in \mathtip{L^q(\mathbb{R}^n)}{\mathbb{R}^n 上的全体 q 次可积函数}$<br>成立</p>
 
 $$
-\lVert{{f}\ast{g}}\rVert_{L^r(\mathbb{R}^n)} \leqslant \lVert{f}\rVert_{L^p(\mathbb{R}^n)}\lVert{g}\rVert_{L^q(\mathbb{R}^n)}
+\bbox[5pt]{
+\mathtip{\lVert{{f}\ast{g}}\rVert_r}{L^r(\mathbb{R}^n) 上的范数} \leqslant \mathtip{\lVert{f}\rVert_p}{L^p(\mathbb{R}^n) 上的范数}\mathtip{\lVert{g}\rVert_q}{L^q(\mathbb{R}^n) 上的范数}
+}
 $$
 
 
 <h1 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h1><p>(1) $p,q,r \in (1,+\infty)$<br>(1.1) 估计 $|{{f}\ast{g}}(x)|$</p>
 
 $$
+\bbox[5pt]{
 \begin{aligned}
 & |{{f}\ast{g}}(x)| \\
-= & \left|\int_{\mathbb{R}^n}{f(x-y)g(y)}{dx}\right| \qquad & (\text{定义 卷积}) \\
-\leqslant & \int_{\mathbb{R}^n}{|f(x-y)||g(y)|}{dx} \qquad & (\text{定理*}) \\
+\mathtip{\color{skyblue}{=}}{定义: 卷积} & \left|\int_{\mathbb{R}^n}{f(x-y)g(y)}{dx}\right| \\
+\mathtip{\color{skyblue}{\leqslant}}{定理*} & \int_{\mathbb{R}^n}{|f(x-y)||g(y)|}{dx} \\
 = & \int_{\mathbb{R}^n}{|f(x-y)|^{1-\frac{p}{r}+\frac{p}{r}}|g(y)|^{1-\frac{q}{r}+\frac{q}{r}}}{dx} \\
 = & \int_{\mathbb{R}^n}{|f(x-y)|^{\frac{p}{r}}|g(y)|^{\frac{q}{r}}|f(x-y)|^{1-\frac{p}{r}}|g(y)|^{1-\frac{q}{r}}}{dx} \\
 = & \int_{\mathbb{R}^n}{(|f(x-y)|^p|g(y)|^q)^{\frac{1}{r}} \cdot |f(x-y)|^{\frac{r-p}{r}} \cdot |g(y)|^{\frac{r-q}{r}}}{dx} \\
-= & \lVert{(|f(x-\cdot)|^p|g(\cdot)|^q)^{\frac{1}{r}}}\rVert_{L^r(\mathbb{R}^n)} \cdot \lVert{|f(x-\cdot)|^{\frac{r-p}{r}}}\rVert_{L^{\frac{pr}{r-p}}(\mathbb{R}^n)} \cdot \lVert{|g(\cdot)|^{\frac{r-q}{r}}}\rVert_{L^{\frac{qr}{r-q}}(\mathbb{R}^n)} \qquad & (\text{定理 Hölder 不等式})
+\mathtip{\color{skyblue}{\leqslant}}{定理: Hölder 不等式} & \mathtip{\lVert{(|f(x-\cdot)|^p|g(\cdot)|^q)^{\frac{1}{r}}}\rVert_r}{L^r(\mathbb{R}^n) 上的范数} \cdot \mathtip{\lVert{|f(x-\cdot)|^{\frac{r-p}{r}}}\rVert_\frac{pr}{r-p}}{L^{\frac{pr}{r-p}}(\mathbb{R}^n) 上的范数} \cdot \mathtip{\lVert{|g(\cdot)|^{\frac{r-q}{r}}}\rVert_\frac{qr}{r-q}}{L^{\frac{qr}{r-q}}(\mathbb{R}^n) 上的范数}
 \end{aligned}
+}
 $$
 
 
 <p>(1.2) 分别计算</p>
 
 $$
+\bbox[5pt]{
 \begin{aligned}
-& \lVert{(|f(x-\cdot)|^p|g(\cdot)|^q)^{\frac{1}{r}}}\rVert_{L^r(\mathbb{R}^n)} \\
-= & \left(\int_{\mathbb{R}^n}{\left((|f(x-y)|^p|g(y)|^q)^{\frac{1}{r}}\right)^r}{dy}\right)^{\frac{1}{r}} \qquad & (\text{定义 } L^p \text{范数}) \\
+& \mathtip{\lVert{(|f(x-\cdot)|^p|g(\cdot)|^q)^{\frac{1}{r}}}\rVert_r}{L^r(\mathbb{R}^n) 上的范数} \\
+\mathtip{\color{skyblue}{=}}{定义: L^r 上的范数} & \left(\int_{\mathbb{R}^n}{\left((|f(x-y)|^p|g(y)|^q)^{\frac{1}{r}}\right)^r}{dy}\right)^{\frac{1}{r}} \\
 = & \left(\int_{\mathbb{R}^n}{|f(x-y)|^p|g(y)|^q}{dy}\right)^{\frac{1}{r}}
 \end{aligned}
+}
 $$
 
 
 
 $$
+\bbox[5pt]{
 \begin{aligned}
-& \lVert{|f(x-\cdot)|^{\frac{r-p}{r}}}\rVert_{L^{\frac{pr}{r-p}}(\mathbb{R}^n)} \\
-= & \left(\int_{\mathbb{R}^n}{\left(|f(x-y)|^{\frac{r-p}{r}}\right)^{\frac{pr}{r-p}}}{dy}\right)^{\frac{r-p}{pr}} \qquad & (\text{定义 } L^p \text{范数}) \\
+& \mathtip{\lVert{|f(x-\cdot)|^{\frac{r-p}{r}}}\rVert_\frac{pr}{r-p}}{L^{\frac{pr}{r-p}}(\mathbb{R}^n) 上的范数} \\
+\mathtip{\color{skyblue}{=}}{定义: L^{\frac{pr}{r-p}}(\mathbb{R}^n) 上的范数} & \left(\int_{\mathbb{R}^n}{\left(|f(x-y)|^{\frac{r-p}{r}}\right)^{\frac{pr}{r-p}}}{dy}\right)^{\frac{r-p}{pr}} \\
 = & \left(\int_{\mathbb{R}^n}{|f(x-y)|^p}{dy}\right)^{\frac{r-p}{pr}} \\
 = & \left(\left(\int_{\mathbb{R}^n}{|f(x-y)|^p}{dy}\right)^{\frac{1}{p}}\right)^{\frac{r-p}{r}} \\
-= & \lVert{f(x-\cdot)}\rVert_{L^p(\mathbb{R}^n)}^{\frac{r-p}{r}} \qquad & (\text{定义 } L^p \text{范数}) \\
-= & \lVert{f}\rVert_{L^p(\mathbb{R}^n)}^{\frac{r-p}{r}} \qquad & (\text{定理* }) \\
+\mathtip{\color{skyblue}{=}}{定义: L^p(\mathbb{R}^n) 上的范数} & \mathtip{\lVert{f(x-\cdot)}\rVert_p}{L^p(\mathbb{R}^n) 上的范数}^{\frac{r-p}{r}} \\
+\mathtip{\color{skyblue}{=}}{定理*} & \mathtip{\lVert{f}\rVert_p}{L^p(\mathbb{R}^n) 上的范数}^{\frac{r-p}{r}} \\
 \end{aligned}
+}
 $$
 
 
 
 $$
+\bbox[5pt]{
 \begin{aligned}
-& \lVert{|g(\cdot)|^{\frac{r-q}{r}}}\rVert_{L^{\frac{qr}{r-q}}(\mathbb{R}^n)} \\
-= & \left(\int_{\mathbb{R}^n}{\left(|g(y)|^{\frac{r-q}{r}}\right)^{\frac{qr}{r-q}}}{dy}\right)^{\frac{r-q}{qr}} \qquad & (\text{定义 } L^p \text{范数}) \\
+& \mathtip{\lVert{|g(\cdot)|^{\frac{r-q}{r}}}\rVert_\frac{qr}{r-q}}{L^{\frac{qr}{r-q}}(\mathbb{R}^n) 上的范数} \\
+\mathtip{\color{skyblue}{=}}{定义: L^{\frac{qr}{r-q}}(\mathbb{R}^n) 上的范数} & \left(\int_{\mathbb{R}^n}{\left(|g(y)|^{\frac{r-q}{r}}\right)^{\frac{qr}{r-q}}}{dy}\right)^{\frac{r-q}{qr}} \\
 = & \left(\int_{\mathbb{R}^n}{|g(y)|^q}{dy}\right)^{\frac{r-q}{qr}} \\
 = & \left(\left(\int_{\mathbb{R}^n}{|g(y)|^q}{dy}\right)^{\frac{1}{q}}\right)^{\frac{r-q}{r}} \\
-= & \lVert{g}\rVert_{L^q(\mathbb{R}^n)}^{\frac{r-q}{r}} \qquad & (\text{定义 } L^p \text{范数}) \\
+\mathtip{\color{skyblue}{=}}{定义: L^q(\mathbb{R}^n) 上的范数} & \mathtip{\lVert{g}\rVert_q}{L^q(\mathbb{R}^n) 上的范数}^{\frac{r-q}{r}} \\
 \end{aligned}
+}
 $$
 
 
-<p>(1.3) 估计 $\lVert{{f}\ast{g}}\rVert_{L^r(\mathbb{R}^n)}^r$</p>
+<p>(1.3) 估计 $\mathtip{\lVert{{f}\ast{g}}\rVert_r}{L^r(\mathbb{R}^n) 上的范数}^r$</p>
 
 $$
+\bbox[5pt]{
 \begin{aligned}
-& \lVert{{f}\ast{g}}\rVert_{L^r(\mathbb{R}^n)}^r \\
-= & \int_{\mathbb{R}^n}{|{{f}\ast{g}}(x)|^r}{dx} \qquad & (\text{定义 卷积}) \\
-\leqslant & \int_{\mathbb{R}^n}{\left(\left(\int_{\mathbb{R}^n}{|f(x-y)|^p|g(y)|^q}{dy}\right)^{\frac{1}{r}} \cdot \lVert{f}\rVert_{L^p(\mathbb{R}^n)}^{\frac{r-p}{r}} \cdot \lVert{g}\rVert_{L^q(\mathbb{R}^n)}^{\frac{r-q}{r}}\right)^r}{dx} \qquad & (\text{由(2)}) \\
-= & \int_{\mathbb{R}^n}{\left(\int_{\mathbb{R}^n}{|f(x-y)|^p|g(y)|^q}{dy}\right) \cdot \lVert{f}\rVert_{L^p(\mathbb{R}^n)}^{r-p} \cdot \lVert{g}\rVert_{L^q(\mathbb{R}^n)}^{r-q}}{dx} \\
-= & \lVert{f}\rVert_{L^p(\mathbb{R}^n)}^{r-p}\lVert{g}\rVert_{L^q(\mathbb{R}^n)}^{r-q}\int_{\mathbb{R}^n}{\left(\int_{\mathbb{R}^n}{|f(x-y)|^p|g(y)|^q}{dy}\right)}{dx} \\
-= & \lVert{f}\rVert_{L^p(\mathbb{R}^n)}^{r-p}\lVert{g}\rVert_{L^q(\mathbb{R}^n)}^{r-q}\int_{\mathbb{R}^n}{|g(y)|^q\left(\int_{\mathbb{R}^n}{|f(x-y)|^p}{dx}\right)}{dy} \qquad & (\text{定理* Fubini定理}) \\
-= & \lVert{f}\rVert_{L^p(\mathbb{R}^n)}^{r-p}\lVert{g}\rVert_{L^q(\mathbb{R}^n)}^{r-q}\int_{\mathbb{R}^n}{|f(x)|^p}{dx}\int_{\mathbb{R}^n}{|g(y)|^q}{dy} \qquad & (\text{定理* }) \\
-= & \lVert{f}\rVert_{L^p(\mathbb{R}^n)}^{r-p}\lVert{g}\rVert_{L^q(\mathbb{R}^n)}^{r-q}\lVert{f}\rVert_{L^p(\mathbb{R}^n)}^p\lVert{g}\rVert_{L^q(\mathbb{R}^n)}^q \qquad & (\text{定义 } L^p \text{范数}) \\
-= & \lVert{f}\rVert_{L^p(\mathbb{R}^n)}^r\lVert{g}\rVert_{L^q(\mathbb{R}^n)}^r
+& \mathtip{\lVert{{f}\ast{g}}\rVert_r}{L^r(\mathbb{R}^n) 上的范数}^r \\
+\mathtip{\color{skyblue}{=}}{定义: 卷积} & \int_{\mathbb{R}^n}{|{{f}\ast{g}}(x)|^r}{dx} \\
+\mathtip{\color{skyblue}{\leqslant}}{步骤: (2)} & \int_{\mathbb{R}^n}{\left(\left(\int_{\mathbb{R}^n}{|f(x-y)|^p|g(y)|^q}{dy}\right)^{\frac{1}{r}} \cdot \mathtip{\lVert{f}\rVert_p}{L^p(\mathbb{R}^n) 上的范数}^{\frac{r-p}{r}} \cdot \mathtip{\lVert{g}\rVert_q}{L^q(\mathbb{R}^n) 上的范数}^{\frac{r-q}{r}}\right)^r}{dx} \\
+= & \int_{\mathbb{R}^n}{\left(\int_{\mathbb{R}^n}{|f(x-y)|^p|g(y)|^q}{dy}\right) \cdot \mathtip{\lVert{f}\rVert_p}{L^p(\mathbb{R}^n) 上的范数}^{r-p} \cdot \mathtip{\lVert{g}\rVert_q}{L^q(\mathbb{R}^n) 上的范数}^{r-q}}{dx} \\
+= & \mathtip{\lVert{f}\rVert_p}{L^p(\mathbb{R}^n) 上的范数}^{r-p}\mathtip{\lVert{g}\rVert_q}{L^q(\mathbb{R}^n) 上的范数}^{r-q}\int_{\mathbb{R}^n}{\left(\int_{\mathbb{R}^n}{|f(x-y)|^p|g(y)|^q}{dy}\right)}{dx} \\
+\mathtip{\color{skyblue}{=}}{定理: Fubini定理} & \mathtip{\lVert{f}\rVert_p}{L^p(\mathbb{R}^n) 上的范数}^{r-p}\mathtip{\lVert{g}\rVert_q}{L^q(\mathbb{R}^n) 上的范数}^{r-q}\int_{\mathbb{R}^n}{|g(y)|^q\left(\int_{\mathbb{R}^n}{|f(x-y)|^p}{dx}\right)}{dy} \\
+\mathtip{\color{skyblue}{=}}{定理*} & \mathtip{\lVert{f}\rVert_p}{L^p(\mathbb{R}^n) 上的范数}^{r-p}\mathtip{\lVert{g}\rVert_q}{L^q(\mathbb{R}^n) 上的范数}^{r-q}\int_{\mathbb{R}^n}{|f(x)|^p}{dx}\int_{\mathbb{R}^n}{|g(y)|^q}{dy} \\
+\mathtip{\color{skyblue}{=}}{\substack{定义: L^p(\mathbb{R}^n) 上的范数 \\ 定义: L^q(\mathbb{R}^n) 上的范数}} & \mathtip{\lVert{f}\rVert_p}{L^p(\mathbb{R}^n) 上的范数}^{r-p}\mathtip{\lVert{g}\rVert_q}{L^q(\mathbb{R}^n) 上的范数}^{r-q}\mathtip{\lVert{f}\rVert_p}{L^p(\mathbb{R}^n) 上的范数}^p\mathtip{\lVert{g}\rVert_q}{L^q(\mathbb{R}^n) 上的范数}^q \\
+= & \mathtip{\lVert{f}\rVert_p}{L^p(\mathbb{R}^n) 上的范数}^r\mathtip{\lVert{g}\rVert_q}{L^q(\mathbb{R}^n) 上的范数}^r
 \end{aligned}
+}
 $$
 
 
 <p>综上</p>
 
 $$
-\lVert{{f}\ast{g}}\rVert_{L^r(\mathbb{R}^n)} \leqslant \lVert{f}\rVert_{L^p(\mathbb{R}^n)}\lVert{g}\rVert_{L^q(\mathbb{R}^n)}
+\bbox[5pt]{
+\mathtip{\lVert{{f}\ast{g}}\rVert_r}{L^r(\mathbb{R}^n) 上的范数} \leqslant \mathtip{\lVert{f}\rVert_p}{L^p(\mathbb{R}^n) 上的范数}\mathtip{\lVert{g}\rVert_q}{L^q(\mathbb{R}^n) 上的范数}
+}
 $$
 
                 
@@ -462,7 +476,7 @@ $$
       </div>
     </div>
 
-    <div class="side-col d-none d-lg-block col-lg-2">
+    <div class="side-col d-none d-lg-block col-lg-3">
       
   <aside class="sidebar" style="margin-left: -1rem">
     <div id="toc">

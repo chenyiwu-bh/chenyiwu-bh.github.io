@@ -16,15 +16,15 @@
   <meta name="author" content="chenyiwu-bh">
   <meta name="keywords" content="">
   
-    <meta name="description" content="定理 Minkovski 不等式给定 $p \geqslant 1$则 $\forall f \in L^p(\mathbb{R}^n)$ 和 $\forall g \in L^q(\mathbb{R}^n)$成立  $$ \lVert{f+g}\rVert_{L^p(\mathbb{R}^n)} \leqslant \lVert{f}\rVert_{L^p(\mathbb{R}^n)}+\lVe">
+    <meta name="description" content="定理 Minkovski 不等式给定 $p \geqslant 1$则 $\forall f,g \in \mathtip{L^p(\mathbb{R}^n)}{\mathbb{R}^n 上的全体 p 次可积函数 }$成立  $$ \bbox[5pt]{ \mathtip{\lVert{f+g}\rVert_p}{L^p(\mathbb{R}^n) 上的范数} \leqslant \mathtip">
 <meta property="og:type" content="article">
 <meta property="og:title" content="定理 Minkovski 不等式">
 <meta property="og:url" content="http://example.com/Theorems/%E5%AE%9A%E7%90%86-Minkovski-%E4%B8%8D%E7%AD%89%E5%BC%8F/index.html">
 <meta property="og:site_name" content="chenyiwu-bh&#39;s Blog">
-<meta property="og:description" content="定理 Minkovski 不等式给定 $p \geqslant 1$则 $\forall f \in L^p(\mathbb{R}^n)$ 和 $\forall g \in L^q(\mathbb{R}^n)$成立  $$ \lVert{f+g}\rVert_{L^p(\mathbb{R}^n)} \leqslant \lVert{f}\rVert_{L^p(\mathbb{R}^n)}+\lVe">
+<meta property="og:description" content="定理 Minkovski 不等式给定 $p \geqslant 1$则 $\forall f,g \in \mathtip{L^p(\mathbb{R}^n)}{\mathbb{R}^n 上的全体 p 次可积函数 }$成立  $$ \bbox[5pt]{ \mathtip{\lVert{f+g}\rVert_p}{L^p(\mathbb{R}^n) 上的范数} \leqslant \mathtip">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-07-23T12:10:39.481Z">
-<meta property="article:modified_time" content="2024-08-02T15:50:37.601Z">
+<meta property="article:modified_time" content="2024-08-26T08:38:37.570Z">
 <meta property="article:author" content="chenyiwu-bh">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          140 字
+          209 字
         
       </span>
     
@@ -258,12 +258,12 @@
 
 <div class="container-fluid nopadding-x">
   <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
+    <div class="side-col d-none d-lg-block col-lg-0">
       
 
     </div>
 
-    <div class="col-lg-8 nopadding-x-md">
+    <div class="col-lg-9 nopadding-x-md">
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
@@ -272,17 +272,21 @@
             
               <div class="markdown-body">
                 
-                <h1 id="定理-Minkovski-不等式"><a href="#定理-Minkovski-不等式" class="headerlink" title="定理 Minkovski 不等式"></a>定理 Minkovski 不等式</h1><p>给定 $p \geqslant 1$<br>则 $\forall f \in L^p(\mathbb{R}^n)$ 和 $\forall g \in L^q(\mathbb{R}^n)$<br>成立</p>
+                <h1 id="定理-Minkovski-不等式"><a href="#定理-Minkovski-不等式" class="headerlink" title="定理 Minkovski 不等式"></a>定理 Minkovski 不等式</h1><p>给定 $p \geqslant 1$<br>则 $\forall f,g \in \mathtip{L^p(\mathbb{R}^n)}{\mathbb{R}^n 上的全体 p 次可积函数 }$<br>成立</p>
 
 $$
-\lVert{f+g}\rVert_{L^p(\mathbb{R}^n)} \leqslant \lVert{f}\rVert_{L^p(\mathbb{R}^n)}+\lVert{g}\rVert_{L^p(\mathbb{R}^n)}
+\bbox[5pt]{
+\mathtip{\lVert{f+g}\rVert_p}{L^p(\mathbb{R}^n) 上的范数} \leqslant \mathtip{\lVert{f}\rVert_p}{L^p(\mathbb{R}^n) 上的范数} + \mathtip{\lVert{g}\rVert_p}{L^p(\mathbb{R}^n) 上的范数}
+}
 $$
 
 
-<h2 id="推广形式"><a href="#推广形式" class="headerlink" title="推广形式"></a>推广形式</h2><p>给定 $1 \leqslant p < \infty$<br>给定函数 $F : \mathbb{R}^m\times\mathbb{R}^n \to \mathbb{R}$<br>若满足 $F(\cdot,y) \in L^p(\mathbb{R}^n)$ 且 $\lVert{F(x,\cdot)}\rVert_{L^p(\mathbb{R}^n)} \in L^1(\mathbb{R}^m)$<br>成立</p>
+<h2 id="推广形式"><a href="#推广形式" class="headerlink" title="推广形式"></a>推广形式</h2><p>给定 $1 \leqslant p < \infty$<br>给定函数 $F : \mathbb{R}^m\times\mathbb{R}^n \to \mathbb{R}$<br>若满足 $F(\cdot,y) \in \mathtip{L^p(\mathbb{R}^n)}{\mathbb{R}^n 上的全体 p 次可积函数 }$ 且 $\mathtip{\lVert{F(x,\cdot)}\rVert_p}{L^p(\mathbb{R}^n) 上的范数} \in \mathtip{L^1(\mathbb{R}^n)}{\mathbb{R}^m 上的全体可积函数}$<br>成立</p>
 
 $$
-\left\lVert{\int_{\mathbb{R}^m}{F(x,\cdot)}{dx}}\right\rVert_{L^p(\mathbb{R}^n)} \leqslant \int_{\mathbb{R}^m}{\lVert{F(x,\cdot)}\rVert_{L^p(\mathbb{R}^n)}}dx
+\bbox[5pt]{
+\mathtip{\left\lVert{\int_{\mathbb{R}^m}{F(x,\cdot)}{dx}}\right\rVert_p}{L^p(\mathbb{R}^n) 上的范数} \leqslant \int_{\mathbb{R}^m}{\mathtip{\lVert{F(x,\cdot)}\rVert_p}{L^p(\mathbb{R}^n) 上的范数}}dx
+}
 $$
 
 
@@ -369,9 +373,9 @@ $$
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/Examples/%E4%BE%8B%E5%AD%90-%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0/" title="例子 特殊函数">
+                      <a href="/Examples/%E5%AE%9E%E4%BE%8B-%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0/" title="实例 特殊函数">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">例子 特殊函数</span>
+                        <span class="hidden-mobile">实例 特殊函数</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -396,7 +400,7 @@ $$
       </div>
     </div>
 
-    <div class="side-col d-none d-lg-block col-lg-2">
+    <div class="side-col d-none d-lg-block col-lg-3">
       
   <aside class="sidebar" style="margin-left: -1rem">
     <div id="toc">

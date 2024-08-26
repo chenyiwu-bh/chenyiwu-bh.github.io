@@ -16,15 +16,15 @@
   <meta name="author" content="chenyiwu-bh">
   <meta name="keywords" content="">
   
-    <meta name="description" content="引入给定 $n$ 维线性空间 $\mathscr{X} &#x3D; (S,\mathbb{F})$ 及其标准正交基 $e_1,\cdots,e_n$定义二阶协变张量为 $\mathscr{X}$ 上的双线性函数 $f(\cdot,\cdot) : S \times S \to \mathbb{F}$定义 $n$ 阶矩阵为如下形式  $$ A &#x3D; \begin{pmatrix} a_{1,1} &amp; a_{1">
+    <meta name="description" content="引入给定 $n$ 维线性空间 $\mathscr{X} &#x3D; (S,\mathbb{F})$ 及其标准正交基 $e_1,\cdots,e_n$定义二阶协变张量为 $\mathscr{X}$ 上的双线性函数 $f(\cdot,\cdot) : S \times S \to \mathbb{F}$定义 $n$ 阶矩阵为如下形式  $$ \bbox[5pt]{ A &#x3D; \begin{pmatrix} a_">
 <meta property="og:type" content="article">
 <meta property="og:title" content="话题 有限维线性空间上二阶协变张量与矩阵的一一对应">
 <meta property="og:url" content="http://example.com/Topics/%E8%AF%9D%E9%A2%98-%E6%9C%89%E9%99%90%E7%BB%B4%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E4%B8%8A%E4%BA%8C%E9%98%B6%E5%8D%8F%E5%8F%98%E5%BC%A0%E9%87%8F%E4%B8%8E%E7%9F%A9%E9%98%B5%E7%9A%84%E4%B8%80%E4%B8%80%E5%AF%B9%E5%BA%94/index.html">
 <meta property="og:site_name" content="chenyiwu-bh&#39;s Blog">
-<meta property="og:description" content="引入给定 $n$ 维线性空间 $\mathscr{X} &#x3D; (S,\mathbb{F})$ 及其标准正交基 $e_1,\cdots,e_n$定义二阶协变张量为 $\mathscr{X}$ 上的双线性函数 $f(\cdot,\cdot) : S \times S \to \mathbb{F}$定义 $n$ 阶矩阵为如下形式  $$ A &#x3D; \begin{pmatrix} a_{1,1} &amp; a_{1">
+<meta property="og:description" content="引入给定 $n$ 维线性空间 $\mathscr{X} &#x3D; (S,\mathbb{F})$ 及其标准正交基 $e_1,\cdots,e_n$定义二阶协变张量为 $\mathscr{X}$ 上的双线性函数 $f(\cdot,\cdot) : S \times S \to \mathbb{F}$定义 $n$ 阶矩阵为如下形式  $$ \bbox[5pt]{ A &#x3D; \begin{pmatrix} a_">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-08-02T15:37:05.826Z">
-<meta property="article:modified_time" content="2024-08-02T15:50:37.619Z">
+<meta property="article:modified_time" content="2024-08-26T08:38:37.581Z">
 <meta property="article:author" content="chenyiwu-bh">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          823 字
+          792 字
         
       </span>
     
@@ -258,12 +258,12 @@
 
 <div class="container-fluid nopadding-x">
   <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
+    <div class="side-col d-none d-lg-block col-lg-0">
       
 
     </div>
 
-    <div class="col-lg-8 nopadding-x-md">
+    <div class="col-lg-9 nopadding-x-md">
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
@@ -275,6 +275,7 @@
                 <h1 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h1><p>给定 $n$ 维线性空间 $\mathscr{X} = (S,\mathbb{F})$ 及其标准正交基 $e_1,\cdots,e_n$<br>定义二阶协变张量为 $\mathscr{X}$ 上的双线性函数 $f(\cdot,\cdot) : S \times S \to \mathbb{F}$<br>定义 $n$ 阶矩阵为如下形式</p>
 
 $$
+\bbox[5pt]{
 A =
 \begin{pmatrix}
 a_{1,1} & a_{1,2} & a_{1,3} & \cdots & a_{1,n} \\
@@ -284,12 +285,14 @@ a_{3,1} & a_{3,2} & a_{3,3} & \cdots & a_{3,n} \\
 a_{n,1} & a_{n,2} & a_{n,3} & \cdots & a_{n,n} \\
 \end{pmatrix}
 = (a_{i,j})_{1 \leqslant i,j \leqslant n}
+}
 $$
 
 
 <h1 id="二阶协变张量与矩阵的一一对应"><a href="#二阶协变张量与矩阵的一一对应" class="headerlink" title="二阶协变张量与矩阵的一一对应"></a>二阶协变张量与矩阵的一一对应</h1><h2 id="一个二阶协变张量对应一个矩阵"><a href="#一个二阶协变张量对应一个矩阵" class="headerlink" title="一个二阶协变张量对应一个矩阵"></a>一个二阶协变张量对应一个矩阵</h2><p>对二阶协变张量 $f(\cdot,\cdot) : S \times S \to \mathbb{F}$<br>定义矩阵</p>
 
 $$
+\bbox[5pt]{
 A_f \triangleq (f(e_i,e_j))_{1 \leqslant i,j \leqslant n} = 
 \begin{pmatrix}
 f(e_1,e_1) & f(e_1,e_2) & f(e_1,e_3) & \cdots & f(e_1,e_n) \\
@@ -298,35 +301,41 @@ f(e_3,e_1) & f(e_3,e_2) & f(e_3,e_3) & \cdots & f(e_3,e_n) \\
 \vdots     & \vdots     & \vdots     & \ddots & \vdots     \\
 f(e_n,e_1) & f(e_n,e_2) & f(e_n,e_3) & \cdots & f(e_n,e_n) \\
 \end{pmatrix}
+}
 $$
 
 <p>给定 $\displaystyle x = \sum_{k=1}^{n}{x_ke_k} \in S$ 与 $\displaystyle y = \sum_{k=1}^{n}{y_ke_k} \in S$ ，其中 $\forall k \in \mathbb{N}$ 且 $1 \leqslant k \leqslant n$ 成立 $x_k,y_k \in \mathbb{F}$<br>定义向量 $X \triangleq (x_1,\cdots,x_n)^T$ 与向量 $Y \triangleq (y_1,\cdots,y_n)^T$<br>有</p>
 
 $$
+\bbox[5pt]{
 \begin{aligned}
-X^TA_fY & = \sum_{j=1}^{n}{\left(\sum_{i=1}^{n}{x_if(e_i,e_j)}\right)y_j} & (\text{定义 矩阵乘法}) \\
-& = \sum_{j=1}^{n}{f\left(\sum_{i=1}^{n}{x_ie_i},e_j\right)y_j} & (\text{定义 二阶张量的线性性}) \\
-& = \sum_{j=1}^{n}{f(x,e_j)y_j} \\
-& = f\left(x,\sum_{j=1}^{n}{y_je_j}\right) & (\text{定义 二阶张量的线性性}) \\
-& = f(x,y)
+X^TA_fY = & \sum_{j=1}^{n}{\left(\sum_{i=1}^{n}{x_if(e_i,e_j)}\right)y_j} \\
+= & \sum_{j=1}^{n}{f\left(\sum_{i=1}^{n}{x_ie_i},e_j\right)y_j} \\
+= & \sum_{j=1}^{n}{f(x,e_j)y_j} \\
+= & f\left(x,\sum_{j=1}^{n}{y_je_j}\right) \\
+= & f(x,y)
 \end{aligned}
+}
 $$
 
 
 <p>即有以下关系图成立</p>
 
 $$
+\bbox[5pt]{
 \begin{CD}
 f    @. (  @. x    @. ,  @. y    @. ) @. =          @. f(x,y)  \\
 @VVV    @.    @VVV    @.    @VVV    @.   @.            @|      \\
 A_f  @. (  @. X    @. ,  @. Y    @. ) @. \triangleq @. X^TA_fY
 \end{CD}
+}
 $$
 
 
 <h2 id="一个矩阵对应一个二阶协变张量"><a href="#一个矩阵对应一个二阶协变张量" class="headerlink" title="一个矩阵对应一个二阶协变张量"></a>一个矩阵对应一个二阶协变张量</h2><p>对 $n$ 阶矩阵</p>
 
 $$
+\bbox[5pt]{
 A =
 \begin{pmatrix}
 a_{1,1} & a_{1,2} & a_{1,3} & \cdots & a_{1,n} \\
@@ -336,14 +345,16 @@ a_{3,1} & a_{3,2} & a_{3,3} & \cdots & a_{3,n} \\
 a_{n,1} & a_{n,2} & a_{n,3} & \cdots & a_{n,n} \\
 \end{pmatrix}
 = (a_{i,j})_{1 \leqslant i,j \leqslant n}
+}
 $$
 
 <p>给定向量 $X = (x_1,\cdots,x_n)^T$ 与向量 $Y = (y_1,\cdots,y_n)^T$ ，其中 $\forall k \in \mathbb{N}$ 且 $1 \leqslant k \leqslant n$ 成立 $x_k,y_k \in \mathbb{F}$<br>定义 $\displaystyle x \triangleq \sum_{k=1}^{n}{x_ke_k} \in S$ 与 $\displaystyle y \triangleq \sum_{k=1}^{n}{y_ke_k} \in S$<br>定义二阶协变张量为 $\displaystyle f_A(x,y) = \sum_{j=1}^{n}{\left(\sum_{i=1}^{n}{x_ia_{i,j}}\right)y_j}$<br>有</p>
 
 $$
+\bbox[5pt]{
 \begin{aligned}
-f_A(x,y) & = \sum_{j=1}^{n}{\left(\sum_{i=1}^{n}{x_ia_{i,j}}\right)y_j} \\
-& = 
+f_A(x,y) = & \sum_{j=1}^{n}{\left(\sum_{i=1}^{n}{x_ia_{i,j}}\right)y_j} \\
+= & 
 \begin{pmatrix}
 \displaystyle \sum_{i=1}^{n}{x_ia_{i,1}} & \cdots & \displaystyle \sum_{i=1}^{n}{x_ia_{i,n}}
 \end{pmatrix}
@@ -351,8 +362,8 @@ f_A(x,y) & = \sum_{j=1}^{n}{\left(\sum_{i=1}^{n}{x_ia_{i,j}}\right)y_j} \\
 y_1 \\
 \vdots \\
 y_n
-\end{pmatrix} & (\text{定义 矩阵乘法}) \\
-& = 
+\end{pmatrix} \\
+= & 
 \begin{pmatrix}
 x_1 \\
 \vdots \\
@@ -369,33 +380,40 @@ a_{n,1} & a_{n,2} & a_{n,3} & \cdots & a_{n,n} \\
 y_1 \\
 \vdots \\
 y_n
-\end{pmatrix} & (\text{定义 矩阵乘法}) \\
-& = X^TAY
+\end{pmatrix} \\
+= & X^TAY
 \end{aligned}
+}
 $$
 
 
 <p>即有以下关系图成立</p>
 
 $$
+\bbox[5pt]{
 \begin{CD}
 A    @. (  @. X    @. ,  @. Y    @. ) @. \triangleq @. X^TAY    \\
 @VVV    @.    @VVV    @.    @VVV    @.   @.            @|       \\
 f_A  @. (  @. x    @. ,  @. y    @. ) @. =          @. f_A(x,y)
 \end{CD}
+}
 $$
 
 
 <h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>综上所述，存在二阶协变张量与矩阵的一一对应<br>或者说有线性空间之间的同构（待详细证明）</p>
 
 $$
-(L_2(\mathscr{X}),\mathbb{F}) \cong (M_{n \times n}(\mathbb{F}),\mathbb{F})
+\bbox[5pt]{
+(L_2(\mathscr{X}),\mathbb{F}) \cong M_{n \times n}(\mathbb{F})
+}
 $$
 
 <p>特别地</p>
 
 $$
-(L_2(\mathbb{R}^n),\mathbb{R}) \cong (M_{n \times n}(\mathbb{R}),\mathbb{R})
+\bbox[5pt]{
+(L_2(\mathbb{R}^n),\mathbb{R}) \cong M_{n \times n}(\mathbb{R})
+}
 $$
 
 
@@ -481,6 +499,12 @@ $$
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/Articles/%E7%8E%B0%E4%BB%A3%E5%BE%AE%E5%88%86%E6%B5%81%E5%BD%A2%E7%90%86%E8%AE%BA/" title="现代微分流形理论">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">现代微分流形理论</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
@@ -502,7 +526,7 @@ $$
       </div>
     </div>
 
-    <div class="side-col d-none d-lg-block col-lg-2">
+    <div class="side-col d-none d-lg-block col-lg-3">
       
   <aside class="sidebar" style="margin-left: -1rem">
     <div id="toc">

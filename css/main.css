@@ -765,7 +765,7 @@ sup > a::before,
   padding: 3rem 0;
 }
 html {
-  font-size: 20px;
+  font-size: 24px;
   letter-spacing: 0.02em;
 }
 html,
@@ -1892,6 +1892,18 @@ mjx-container svg:focus,
 .note-light {
   background-color: rgba(254,254,254,0.25);
   border-color: #0f0f0f;
+}
+.note-definition {
+  background-color: rgba(255,250,205,0.4);
+  border-color: #ffd700;
+}
+.note-theorem {
+  background-color: rgba(135,206,250,0.4);
+  border-color: #4169e1;
+}
+.note-remark {
+  background-color: rgba(144,238,144,0.4);
+  border-color: #3cb371;
 }
 .label {
   display: inline;

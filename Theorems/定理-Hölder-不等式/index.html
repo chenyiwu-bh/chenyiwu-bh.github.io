@@ -16,15 +16,15 @@
   <meta name="author" content="chenyiwu-bh">
   <meta name="keywords" content="">
   
-    <meta name="description" content="定理 Hölder 不等式给定 $p , q \geqslant 1$ 满足 $\frac{1}{p} + \frac{1}{q} &#x3D; 1$则 $\forall f \in L^p(\mathbb{R}^n)$ 和 $\forall g \in L^q(\mathbb{R}^n)$成立  $$ \int_{\mathbb{R}^n}{f(x)g(x)}{dx} \leqslant \lVert{f">
+    <meta name="description" content="定理 Hölder 不等式给定 $p , q \geqslant 1$ 满足 $\frac{1}{p} + \frac{1}{q} &#x3D; 1$则 $\forall f \in \mathtip{L^p(\mathbb{R}^n)}{\mathbb{R}^n 上的全体 p 次可积函数}$ 和 $\forall g \in \mathtip{L^q(\mathbb{R}^n)}{\mathbb{R}^n">
 <meta property="og:type" content="article">
 <meta property="og:title" content="定理 Hölder 不等式">
 <meta property="og:url" content="http://example.com/Theorems/%E5%AE%9A%E7%90%86-H%C3%B6lder-%E4%B8%8D%E7%AD%89%E5%BC%8F/index.html">
 <meta property="og:site_name" content="chenyiwu-bh&#39;s Blog">
-<meta property="og:description" content="定理 Hölder 不等式给定 $p , q \geqslant 1$ 满足 $\frac{1}{p} + \frac{1}{q} &#x3D; 1$则 $\forall f \in L^p(\mathbb{R}^n)$ 和 $\forall g \in L^q(\mathbb{R}^n)$成立  $$ \int_{\mathbb{R}^n}{f(x)g(x)}{dx} \leqslant \lVert{f">
+<meta property="og:description" content="定理 Hölder 不等式给定 $p , q \geqslant 1$ 满足 $\frac{1}{p} + \frac{1}{q} &#x3D; 1$则 $\forall f \in \mathtip{L^p(\mathbb{R}^n)}{\mathbb{R}^n 上的全体 p 次可积函数}$ 和 $\forall g \in \mathtip{L^q(\mathbb{R}^n)}{\mathbb{R}^n">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-07-17T14:19:20.188Z">
-<meta property="article:modified_time" content="2024-08-02T15:50:37.598Z">
+<meta property="article:modified_time" content="2024-08-26T08:38:37.568Z">
 <meta property="article:author" content="chenyiwu-bh">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          140 字
+          207 字
         
       </span>
     
@@ -258,12 +258,12 @@
 
 <div class="container-fluid nopadding-x">
   <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
+    <div class="side-col d-none d-lg-block col-lg-0">
       
 
     </div>
 
-    <div class="col-lg-8 nopadding-x-md">
+    <div class="col-lg-9 nopadding-x-md">
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
@@ -272,17 +272,21 @@
             
               <div class="markdown-body">
                 
-                <h1 id="定理-Holder-不等式"><a href="#定理-Holder-不等式" class="headerlink" title="定理 Hölder 不等式"></a>定理 Hölder 不等式</h1><p>给定 $p , q \geqslant 1$ 满足 $\frac{1}{p} + \frac{1}{q} = 1$<br>则 $\forall f \in L^p(\mathbb{R}^n)$ 和 $\forall g \in L^q(\mathbb{R}^n)$<br>成立</p>
+                <h1 id="定理-Holder-不等式"><a href="#定理-Holder-不等式" class="headerlink" title="定理 Hölder 不等式"></a>定理 Hölder 不等式</h1><p>给定 $p , q \geqslant 1$ 满足 $\frac{1}{p} + \frac{1}{q} = 1$<br>则 $\forall f \in \mathtip{L^p(\mathbb{R}^n)}{\mathbb{R}^n 上的全体 p 次可积函数}$ 和 $\forall g \in \mathtip{L^q(\mathbb{R}^n)}{\mathbb{R}^n 上的全体 q 次可积函数}$<br>成立</p>
 
 $$
-\int_{\mathbb{R}^n}{f(x)g(x)}{dx} \leqslant \lVert{f}\rVert_{L^p(\mathbb{R}^n)}\lVert{g}\rVert_{L^q(\mathbb{R}^n)}
+\bbox[5pt]{
+\int_{\mathbb{R}^n}{f(x)g(x)}{dx} \leqslant \mathtip{\lVert{f}\rVert_p}{L^p(\mathbb{R}^n) 上的范数}\mathtip{\lVert{g}\rVert_q}{L^q(\mathbb{R}^n) 上的范数}
+}
 $$
 
 
-<h2 id="推广形式"><a href="#推广形式" class="headerlink" title="推广形式"></a>推广形式</h2><p>给定 $N \in \mathbb{N}$<br>对 $1 \leqslant k \leqslant N$ ，给定 $p_k \geqslant 1$ 及 $r \geqslant 1$ 满足 $\displaystyle \sum_{k=1}^N{\frac{1}{p_k}} = \frac{1}{r}$<br>则对 $1 \leqslant k \leqslant N$ ，$\forall f_k \in L^{p_k}(\mathbb{R}^n)$<br>成立</p>
+<h2 id="推广形式"><a href="#推广形式" class="headerlink" title="推广形式"></a>推广形式</h2><p>给定 $N \in \mathbb{N}$<br>对 $1 \leqslant k \leqslant N$ ，给定 $p_k \geqslant 1$ 及 $r \geqslant 1$ 满足 $\displaystyle \sum_{k=1}^N{\frac{1}{p_k}} = \frac{1}{r}$<br>则对 $1 \leqslant k \leqslant N$ ，$\forall f_k \in \mathtip{L^{p_k}(\mathbb{R}^n)}{\mathbb{R}^n 上的全体 p_k 次可积函数}$<br>成立</p>
 
 $$
-\left\lVert{\prod_{k=1}^{N}{f_k}}\right\rVert_{L^r(\mathbb{R}^n)} \leqslant \prod_{k=1}^{N}{\lVert{f_k}\rVert_{L^{p_k}(\mathbb{R}^n)}}
+\bbox[5pt]{
+\mathtip{\left\lVert{\prod_{k=1}^{N}{f_k}}\right\rVert_r}{L^r(\mathbb{R}^r) 上的范数} \leqslant \prod_{k=1}^{N}{\mathtip{\lVert{f_k}\rVert_{p_k}}{L^{p_k}(\mathbb{R}^n) 上的范数}}
+}
 $$
 
 
@@ -396,7 +400,7 @@ $$
       </div>
     </div>
 
-    <div class="side-col d-none d-lg-block col-lg-2">
+    <div class="side-col d-none d-lg-block col-lg-3">
       
   <aside class="sidebar" style="margin-left: -1rem">
     <div id="toc">

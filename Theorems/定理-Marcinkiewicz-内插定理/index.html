@@ -16,15 +16,15 @@
   <meta name="author" content="chenyiwu-bh">
   <meta name="keywords" content="">
   
-    <meta name="description" content="定理 Marcinkiewicz 内插定理对角型给定 $1 &lt; p_1 &lt; p_2 \leqslant \infty$ 和 $p_\theta \in (0,\infty)$ 和 $\theta \in (0,1)$ 满足  $$ \frac{1}{p_\theta} &#x3D; \frac{\theta}{p_1} + \frac{1-\theta}{p_2} $$  给定 $T : L^{p_1}(\">
+    <meta name="description" content="定理 Marcinkiewicz 内插定理对角型给定 $1 &lt; p_1 &lt; p_2 \leqslant \infty$ 和 $p_\theta \in (0,\infty)$ 和 $\theta \in (0,1)$ 满足  $$ \bbox[5pt]{ \frac{1}{p_\theta} &#x3D; \frac{\theta}{p_1} + \frac{1-\theta}{p_2} } $$  给定">
 <meta property="og:type" content="article">
 <meta property="og:title" content="定理 Marcinkiewicz 内插定理">
 <meta property="og:url" content="http://example.com/Theorems/%E5%AE%9A%E7%90%86-Marcinkiewicz-%E5%86%85%E6%8F%92%E5%AE%9A%E7%90%86/index.html">
 <meta property="og:site_name" content="chenyiwu-bh&#39;s Blog">
-<meta property="og:description" content="定理 Marcinkiewicz 内插定理对角型给定 $1 &lt; p_1 &lt; p_2 \leqslant \infty$ 和 $p_\theta \in (0,\infty)$ 和 $\theta \in (0,1)$ 满足  $$ \frac{1}{p_\theta} &#x3D; \frac{\theta}{p_1} + \frac{1-\theta}{p_2} $$  给定 $T : L^{p_1}(\">
+<meta property="og:description" content="定理 Marcinkiewicz 内插定理对角型给定 $1 &lt; p_1 &lt; p_2 \leqslant \infty$ 和 $p_\theta \in (0,\infty)$ 和 $\theta \in (0,1)$ 满足  $$ \bbox[5pt]{ \frac{1}{p_\theta} &#x3D; \frac{\theta}{p_1} + \frac{1-\theta}{p_2} } $$  给定">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-07-25T07:57:39.225Z">
-<meta property="article:modified_time" content="2024-08-02T15:50:37.600Z">
+<meta property="article:modified_time" content="2024-08-26T08:38:37.570Z">
 <meta property="article:author" content="chenyiwu-bh">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          380 字
+          684 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          4 分钟
+          6 分钟
         
       </span>
     
@@ -258,12 +258,12 @@
 
 <div class="container-fluid nopadding-x">
   <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
+    <div class="side-col d-none d-lg-block col-lg-0">
       
 
     </div>
 
-    <div class="col-lg-8 nopadding-x-md">
+    <div class="col-lg-9 nopadding-x-md">
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
@@ -275,54 +275,68 @@
                 <h1 id="定理-Marcinkiewicz-内插定理"><a href="#定理-Marcinkiewicz-内插定理" class="headerlink" title="定理 Marcinkiewicz 内插定理"></a>定理 Marcinkiewicz 内插定理</h1><h2 id="对角型"><a href="#对角型" class="headerlink" title="对角型"></a>对角型</h2><p>给定 $1 < p_1 < p_2 \leqslant \infty$ 和 $p_\theta \in (0,\infty)$ 和 $\theta \in (0,1)$ 满足</p>
 
 $$
+\bbox[5pt]{
 \frac{1}{p_\theta} = \frac{\theta}{p_1} + \frac{1-\theta}{p_2}
+}
 $$
 
-<p>给定 $T : L^{p_1}(\mathbb{R}^n)+L^{p_2}(\mathbb{R}^n) \to \mathscr{L}(\mathbb{R}^n,\mu)$ 为次线性算子<br>若 $\exists A_1,A_2 > 0$ 成立</p>
+<p>给定 $T : \mathtip{L^{p_1}(\mathbb{R}^n)}{\mathbb{R}^n 上的全体 p_1 次可积函数} + \mathtip{L^{p_2}(\mathbb{R}^n)}{\mathbb{R}^n 上的全体 p_2 次可积函数} \to \mathtip{\mathscr{L}(\mathbb{R}^n)}{\mathbb{R}^n 上的全体可测函数}$ 为次线性算子<br>若 $\exists A_1,A_2 > 0$ 成立</p>
 
 $$
+\bbox[5pt]{
 \begin{aligned}
-\forall f \in L^{p_1}(\mathbb{R}^n) , \lVert{T(f)}\rVert_{L^{p_1,\infty}(\mathbb{R}^n)} \leqslant 
-A_1\lVert{f}\rVert_{L^{p_1}(\mathbb{R}^n)} \\
-\forall f \in L^{p_2}(\mathbb{R}^n) , \lVert{T(f)}\rVert_{L^{p_2,\infty}(\mathbb{R}^n)} \leqslant 
-A_2\lVert{f}\rVert_{L^{p_2}(\mathbb{R}^n)}
+\forall f \in \mathtip{L^{p_1}(\mathbb{R}^n)}{\mathbb{R}^n 上的全体 p_1 次可积函数} , \mathtip{\lVert{T(f)}\rVert_{p_1,\infty}}{L^{p_1,\infty}(\mathbb{R}^n) 上的范数} \leqslant 
+A_1\mathtip{\lVert{f}\rVert_{p_1}}{{L^{p_1}(\mathbb{R}^n)} 上的范数} \\
+\forall f \in \mathtip{L^{p_2}(\mathbb{R}^n)}{\mathbb{R}^n 上的全体 p_2 次可积函数} , \mathtip{\lVert{T(f)}\rVert_{p_2,\infty}}{L^{p_2,\infty}(\mathbb{R}^n) 上的范数} \leqslant 
+A_2\mathtip{\lVert{f}\rVert_{p_2}}{{L^{p_2}(\mathbb{R}^n)} 上的范数}
 \end{aligned}
+}
 $$
 
-<p>则 $\forall f \in L^{p_\theta}(\mathbb{R}^n) , T(f) \in L^{p_\theta}(\mathbb{R}^n)$ 且成立</p>
+<p>则 $\forall f \in \mathtip{L^{p_\theta}(\mathbb{R}^n)}{\mathbb{R}^n 上的全体 p_\theta 次可积函数} , T(f) \in \mathtip{L^{p_\theta}(\mathbb{R}^n)}{\mathbb{R}^n 上的全体 p_\theta 次可积函数}$ 且成立</p>
 
 $$
-\forall f \in L^{p_\theta}(\mathbb{R}^n) , \lVert{T(f)}\rVert_{L^{p_\theta}(\mathbb{R}^n)} \leqslant A_{p_1,p_2,\theta}A_1^{\theta}A_2^{1-\theta}\lVert{f}\rVert_{L^{p_\theta}(\mathbb{R}^n)}
+\bbox[5pt]{
+\forall f \in \mathtip{L^{p_\theta}(\mathbb{R}^n)}{\mathbb{R}^n 上的全体 p_\theta 次可积函数} , \mathtip{\lVert{T(f)}\rVert_{p_\theta}}{L^{p_\theta}(\mathbb{R}^n) 上的范数} \leqslant A_{p_1,p_2,\theta}A_1^{\theta}A_2^{1-\theta}\mathtip{\lVert{f}\rVert_{p_\theta}}{L^{p_\theta}(\mathbb{R}^n) 上的范数}
+}
 $$
 
 <p>其中</p>
 
 $$
+\bbox[5pt]{
 A_{p_1,p_2,\theta} = 2\left(\frac{p_\theta}{p_\theta-p_1}-\frac{p_\theta}{p_\theta-p_2}\right)^{\frac{1}{p_\theta}}
+}
 $$
 
 
-<h2 id="推广形式"><a href="#推广形式" class="headerlink" title="推广形式"></a>推广形式</h2><p>给定 $1 \leqslant p_1 \leqslant q_1 \leqslant \infty$ 和 $1 \leqslant p_2 \leqslant q_2 \leqslant \infty$ 满足 $p_1 < p_2$ 且 $q_1 \neq q_2$<br>给定 $T : L^{p_1}(X,\mu)+L^{p_2}(X,\mu) \to \mathscr{L}_{\mathbb{C}}(Y,\nu)$ 为次线性算子<br>若 $\exists A_1,A_2 > 0$ 成立</p>
+<h2 id="推广形式"><a href="#推广形式" class="headerlink" title="推广形式"></a>推广形式</h2><p>给定 $1 \leqslant p_1 \leqslant q_1 \leqslant \infty$ 和 $1 \leqslant p_2 \leqslant q_2 \leqslant \infty$ 满足 $p_1 < p_2$ 且 $q_1 \neq q_2$<br>给定 $T : \mathtip{L^{p_1}(X,\mu)}{测度空间 (X,\mu) 上的全体 p_1 次可积函数} + \mathtip{L^{p_2}(X,\mu)}{测度空间 (X,\mu) 上的全体 p_2 次可积函数} \to \mathtip{\mathscr{L}_{\mathbb{C}}(Y,\nu)}{测度空间 (Y,\nu) 上的全体复值可测函数}$ 为次线性算子<br>若 $\exists A_1,A_2 > 0$ 成立</p>
 
 $$
+\bbox[5pt]{
 \begin{aligned}
-\forall f \in L^{p_1}(X,\mu) , \lVert{T(f)}\rVert_{L^{q_1,\infty}(Y,\nu)} \leqslant 
-A_1\lVert{f}\rVert_{L^{p_1}(X,\mu)} \\
-\forall f \in L^{p_2}(X,\mu) , \lVert{T(f)}\rVert_{L^{q_2,\infty}(Y,\nu)} \leqslant 
-A_2\lVert{f}\rVert_{L^{p_2}(X,\mu)}
+\forall f \in \mathtip{L^{p_1}(X,\mu)}{测度空间 (X,\mu) 上的全体 p_1 次可积函数} , \mathtip{\lVert{T(f)}\rVert_{q_1,\infty}}{L^{q_1,\infty}(Y,\nu) 上的范数} \leqslant 
+A_1\mathtip{\lVert{f}\rVert_{p_1}}{L^{p_1}(X,\mu) 上的范数} \\
+\forall f \in \mathtip{L^{p_2}(X,\mu)}{测度空间 (X,\mu) 上的全体 p_2 次可积函数} , \mathtip{\lVert{T(f)}\rVert_{q_2,\infty}}{L^{q_2,\infty}(Y,\nu) 上的范数} \leqslant 
+A_2\mathtip{\lVert{f}\rVert_{p_2}}{L^{p_2}(X,\mu) 上的范数}
 \end{aligned}
+}
 $$
 
 <p>则 $\forall \theta \in (0,1) , \exists K_{p_1,p_2,q_1,q_2,\theta} > 0$ 成立</p>
 
 $$
-\forall f \in L^{p}(X,\mu) , \lVert{T(f)}\rVert_{L^{q}(Y,\nu)} \leqslant K_{p_1,p_2,q_1,q_2,\theta}A_1^{\theta}A_2^{1-\theta}\lVert{f}\rVert_{L^{p_\theta}(X,\mu)}
+\bbox[5pt]{
+\forall f \in \mathtip{L^p(X,\mu)}{测度空间 (X,\mu) 上的全体 p 次可积函数} , \mathtip{\lVert{T(f)}\rVert_q}{L^{q}(Y,\nu) 上的范数} \leqslant K_{p_1,p_2,q_1,q_2,\theta}A_1^{\theta}A_2^{1-\theta}\mathtip{\lVert{f}\rVert_p}{L^p(X,\mu) 上的范数}
+}
 $$
 
 <p>其中</p>
 
 $$
+\bbox[5pt]{
 \frac{1}{p} = \frac{\theta}{p_1} + \frac{1-\theta}{p_2} , \frac{1}{q} = \frac{\theta}{q_1} + \frac{1-\theta}{q_2}
+}
 $$
 
 
@@ -436,7 +450,7 @@ $$
       </div>
     </div>
 
-    <div class="side-col d-none d-lg-block col-lg-2">
+    <div class="side-col d-none d-lg-block col-lg-3">
       
   <aside class="sidebar" style="margin-left: -1rem">
     <div id="toc">

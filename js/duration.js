@@ -23,7 +23,7 @@
     document.getElementById("timeDate-from-setup").innerHTML = "本站已安全运行&nbsp"+dnum+"&nbsp天";
     document.getElementById("times-from-setup").innerHTML = hnum + "&nbsp小时&nbsp" + mnum + "&nbsp分&nbsp" + snum + "&nbsp秒";
     
-    var start = new Date("2024/08/01 15:31:08");
+    var start = new Date("2024/08/26 16:30:00");
     var now = new Date();
     now.setTime(now.getTime()+250);
     days = (now - start) / 1000 / 60 / 60 / 24;
